@@ -10243,6 +10243,16 @@ a.msfavorites {
   outline: none !important;
 }
 
+.catalog_block_item a.msfavorites {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.catalog_section.wrapper_favorites .catalog_block_slider_item {
+  margin-right: 10px;
+}
+
 a.msfavorites.voted {
   background-image: url(../img/cat_fav1_active.png);
 }

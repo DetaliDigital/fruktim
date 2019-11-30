@@ -599,7 +599,7 @@ footer p.made_by a {text-decoration: none;color:#757575;}
 .cat_quick_view_item_left .advantages_block_mark2 {clear: both;float:none;padding-top:30px;}
 .cat_quick_view_item_left .item_title {display: block;font-size:24px;color:#000000;font-weight:600;padding:0 0 25px 0;}
 .big_img {position: relative;width:395px;height:380px;max-width: 100%;float:left;}
-.big_img a.fancy {display: block;width:100%;height:100%;text-align: center;border-right:0px solid #ebebeb;box-sizing: border-box;}
+.big_img a.fancy {display: block;width:100%;text-align: center;border-right:0px solid #ebebeb;box-sizing: border-box;}
 .big_img a.fancy:before {content: " ";display: inline-block;vertical-align:top;width:0px;height:100%;}
 .big_img img {display: inline-block;vertical-align: top;max-width:98%;}
 .big_img a.zoom {display: block;width:27px;height:27px;box-sizing: border-box;position: absolute;top:30px;right:30px;z-index:2;border:1px solid #ebebeb;background:url(../img/zoom.png) no-repeat center center;}

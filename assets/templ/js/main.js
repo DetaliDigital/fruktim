@@ -858,7 +858,6 @@ $(document).ready(function() {
 		}
 		*/
 
-		$
 		$('.header_top_right').appendTo('header .inner_header_content');
 		$('.header_search').appendTo('header .inner_header');
 

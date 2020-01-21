@@ -9281,7 +9281,7 @@ body a.button.delivery_block_button {
   border: 13px solid #eff1f4;
 }
 
-.content_left_column.to_right .catalog_page_cat_block .catalog_block_item .qty_wrap {
+.content_left_column.to_right .catalog_page_cat_block .catalog_block_item .qty_wrap  {
   display: none;
   text-align: center;
 }
@@ -10130,6 +10130,10 @@ a.filter_clear_button:hover:after {
 
 .catalog_block_slider_item .qty_wrap {
   /*position:absolute;top:100%;left:0;width:100%;*/
+}
+
+.catalog_block_slider_item .qty_wrap {
+  display: none;
 }
 
 fieldset {

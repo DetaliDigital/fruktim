@@ -1086,6 +1086,10 @@ a.ref {
   padding: 53px 0 50px 0;
 }
 
+.catalog_section.catalog_section_five_in_row:last-child {
+    padding-bottom: 100px;
+}
+
 .discount_catalog_section {
   padding-top: 0;
 }
@@ -10134,6 +10138,7 @@ a.filter_clear_button:hover:after {
 
 .catalog_block_slider_item .qty_wrap {
   display: none;
+  text-align: center;
 }
 
 fieldset {
@@ -10324,3 +10329,7 @@ header .header_menu_right .header_menu_button_wrap {float:left;position:relative
 .header_menu_button_wrap ul > li {display: block;}
 .header_menu_button_wrap ul > li > a {display: block;text-decoration: none;padding:0 0 14px 0;font-size:13px;color:#242424;transition: all 0.4s;}
 .header_menu_button_wrap ul > li:hover > a {color:#81bc23;text-decoration:underline;}
+
+.mt--35 {
+    margin-top: 35px !important;
+}

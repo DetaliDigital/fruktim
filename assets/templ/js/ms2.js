@@ -51,4 +51,14 @@ $(document).ready(function() {
 		}
 		return true;
 	}
+
+  $(document).on('click', '#deliveries', function(){
+            var i = $('#deliveries input:checked').val();
+            if(i == 1){
+                $('#address_deliveries').hide();
+            }else{
+                $('#address_deliveries').show();
+            }
+        });
+
 });

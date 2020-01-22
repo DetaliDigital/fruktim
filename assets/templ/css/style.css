@@ -10333,3 +10333,7 @@ header .header_menu_right .header_menu_button_wrap {float:left;position:relative
 .mt--35 {
     margin-top: 35px !important;
 }
+
+.d-none {
+  display: none;
+}

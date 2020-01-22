@@ -28,6 +28,7 @@ $(document).ready(function() {
 		$('input[type="checkbox"]').ezMark();
 	}
 
+  /*
 	if ($('select').length) {
 		if ($(window).width() > 1170) {
 			$('select').selectBox({'keepInViewport':false});
@@ -35,6 +36,7 @@ $(document).ready(function() {
 			$('select').selectboxMobile();
 		}
 	}
+	*/
 
 
 
@@ -111,7 +113,15 @@ $(document).ready(function() {
 		e.preventDefault();
 		$(this).toggleClass('active');
 	});
-	 */
+*/
+
+$(document).on('change', '#mse2_sort', function() {
+        var selected = $(this).find('option:selected');
+        var sort = selected.data('sort');
+        sort += mse2Config.method_delimeter + selected.val();
+        mse2Config.sort =  sort;
+        mSearch2.submit();
+});
 
 	$('.fav_toggler, a.cat_fav').click(function (e) {
         e.preventDefault();
@@ -143,6 +153,7 @@ $(document).ready(function() {
     });
 	//--
 
+  /*
 	$('#mse2_sort select').change(function () {
 		var id=$("#mse2_sort option:selected").val();
 		//console.log($("#mse2_sort option:selected").val());
@@ -161,7 +172,7 @@ $(document).ready(function() {
 
 
     });
-
+  */
 	//listen for the_form_div_checkbox_horizontal other city
 	$('.the_form_div_checkbox_horizontal').find('input[type="text"]').hide();
 

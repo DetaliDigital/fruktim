@@ -55,9 +55,9 @@ $(document).ready(function() {
   $(document).on('click', '#deliveries', function(){
             var i = $('#deliveries input:checked').val();
             if(i == 1){
-                $('#address_deliveries').hide();
+                $('.inp_frm').hide();
             }else{
-                $('#address_deliveries').show();
+                $('.inp_frm').show();
             }
         });
 

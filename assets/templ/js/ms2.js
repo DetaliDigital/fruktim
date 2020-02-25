@@ -52,6 +52,10 @@ $(document).ready(function() {
 		return true;
 	}
 
+  miniShop2.Callbacks.Order.submit.response.success = function () {
+    yaCounter56381620.reachGoal('buy_standart');
+  }
+
   $(document).on('click', '#deliveries', function(){
             var i = $('#deliveries input:checked').val();
             if(i == 1){

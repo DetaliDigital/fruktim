@@ -31,10 +31,15 @@ $(document).ready(function ($) {
         message: response.data.message
         });
         console.log(response);
- 
+
         $('#' + response.form + '_form').addClass('form_error');
         $('#' + response.form + '_form').removeClass('circle-loader-active');
         $('#' + response.form + '_form').find('.circle-loader').removeClass('active');
 
     };
+
+    $(document).on('keypress change', '.is-invalid', function() {
+         var key = $(this).attr('name');
+         $(this).removeClass('is-invalid');
+       });
 });

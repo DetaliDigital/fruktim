@@ -25,8 +25,29 @@ $(document).ready(function() {
 	}
 
 	if ($('input[type="checkbox"]').length) {
-		$('input[type="checkbox"]').ezMark();
+		$('.filter_block input[type="checkbox"]').ezMark();
 	}
+
+
+    //services menu transformation
+	if (($(window).width() >= 1200) && ($('.header_menu>ul>li').length >=6)) {
+	   var h_m_el = $('.header_menu>ul>li');
+	   $('.header_menu_block').addClass('has_right_dropdown');
+
+	   $('<div class="right_dropdown_wrap"><button class="dropdown_more">Еще продукты</button><ul class="right_dropdown"></ul></div>').appendTo('.header_menu');
+
+	   for (var i=6;i<h_m_el.length;i++) {
+	       $(h_m_el[i]).appendTo($('.right_dropdown'));
+	   }
+	}
+	//--
+
+	//-show qty on to cart click
+	$('.product_submit_wrap').on("click", ".to_cart_button", function() {
+	    $(this).closest('div').addClass('show_qty');
+	});
+	//--
+
 
   /*
 	if ($('select').length) {
@@ -58,10 +79,12 @@ $(document).ready(function() {
 		}
     });
 
+/*
     $(document).on( 'click','.js_quick',function(e) {
         $(this).parent().find('.header_quick_cart').toggleClass('active');
         return false;
     });
+*/
 
 
     $(document).on( 'click','.js_search_subm',function(e) {
@@ -86,7 +109,33 @@ $(document).ready(function() {
         return false;
     });
 
+$('#sort_dropdown').click(function() {
+    var menu = document.getElementById('dropdown_menu');
+    console.log('success');
+    if(menu.classList.contains('active'))
+    {
+        menu.classList.remove('active');
+        menu.style.display = 'none';
+    }
+    else
+    {
+        menu.classList.add('active');
+        menu.style.display = 'block';
+    }
+});
 
+$('.sort_picker').click(function(e) {
+    var menu = document.getElementById('dropdown_menu');
+    menu.classList.remove('active');
+    menu.style.display = 'none';
+    var current = e.currentTarget;
+    var input = document.getElementsByClassName('selectBox-label');
+    input[0].innerHTML = current.innerHTML;
+    var sort = $(this).data('sort');
+    sort += mse2Config.method_delimeter + $(this).data('parent');
+    mse2Config.sort =  sort;
+    mSearch2.submit();
+});
 
 /*
     $('.icon.fav_toggler').each(function () {
@@ -208,8 +257,8 @@ $(document).on('change', '#mse2_sort', function() {
 			    slidesToScroll: 1,
 			    arrows: true,
 			    dots: false,
-			    //autoplay: true,
-			    // autoplaySpeed: 2000,
+			    autoplay: true,
+			    autoplaySpeed: 3000,
 			    slide: ".top_banner_slider_item",
 			    respondTo:'slider',
 			    swipeToSlide: true,
@@ -318,11 +367,13 @@ $(document).on('change', '#mse2_sort', function() {
 
 
 	//cart_order_block quick order
+
 	$('.cart_order_block .quick_cart_order_button').click(function(e) {
 		e.preventDefault();
 		$(this).closest('.cart_order_block').toggleClass('active');
 
 	});
+
 	//--
 
 	//cart_extras_button toggler
@@ -382,14 +433,14 @@ $(document).on('change', '#mse2_sort', function() {
     }
 
 
-     if ($(window).width() > 768) {
+     //if ($(window).width() > 768) {
 		$('.catalog_page_cat_block .catalog_block_slider_item').matchHeight({
             byRow: true,
             property: 'height',
             target: null,
             remove: false
     	});
-    }
+    //}
 	//--
 
 	//a.reveal_all
@@ -1122,6 +1173,8 @@ $(document).on('change', '#mse2_sort', function() {
 					// Создание метки
 						myPlacemark1 = new ymaps.Placemark([59.826314, 29.937514]);
 						// Добавление метки на карту
+
+						/*
 						myMap.geoObjects.add(myPlacemark1);
 						myPlacemark1.options.set('iconImageHref', 'img/placemark.png');
 						myPlacemark1.options.set('iconImageSize', [21,37]);
@@ -1140,7 +1193,7 @@ $(document).on('change', '#mse2_sort', function() {
 						myPlacemark3.options.set('iconImageHref', 'img/placemark.png');
 						myPlacemark3.options.set('iconImageSize', [21,37]);
 						myPlacemark3.options.set('iconImageOffset', [0,-37]);
-
+						*/
 
 					 myMap.controls.add("zoomControl", {
 							position: {top: 35, left: 15}
@@ -1167,6 +1220,7 @@ $(document).on('change', '#mse2_sort', function() {
 					// Создание метки
 						myPlacemark1 = new ymaps.Placemark([59.826314, 29.937514]);
 						// Добавление метки на карту
+						/*
 						myMap.geoObjects.add(myPlacemark1);
 						myPlacemark1.options.set('iconImageHref', 'img/placemark1.png');
 						myPlacemark1.options.set('iconImageSize', [28,38]);
@@ -1185,7 +1239,7 @@ $(document).on('change', '#mse2_sort', function() {
 						myPlacemark3.options.set('iconImageHref', 'img/placemark1.png');
 						myPlacemark3.options.set('iconImageSize', [28,38]);
 						myPlacemark3.options.set('iconImageOffset', [0,-38]);
-
+						*/
 
 					 myMap.controls.add("zoomControl", {
 							position: {top: 35, left: 15}

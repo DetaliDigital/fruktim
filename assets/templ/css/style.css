@@ -10302,7 +10302,7 @@ fieldset {
 }
 
 .content_left_column.to_right .catalog_page_cat_block .catalog_block_item .img img {
-  max-width: 78%;
+  max-width: 100%;
   width: 100%;
   display: block;
   margin-left: auto;

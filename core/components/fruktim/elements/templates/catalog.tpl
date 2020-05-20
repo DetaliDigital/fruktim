@@ -10,20 +10,26 @@
     <section class="main main_on_inner_pages">
         <div class="breadcrumbs_block">
             <div class="inner_section">
-                [[pdoCrumbs?&tplWrapper=`@INLINE <ul class="breadcrumbs">[[+output]]</ul>`]]
+                {'pdoCrumbs' | snippet : [
+                'tplWrapper' => '@INLINE <ul class="breadcrumbs">{$output}</ul>'
+                ]}
             </div>
         </div>
 
         <section class="the_content_section the_card_content_section the_cat_content_section padd_bottom0 bg_fff">
             <div class="inner_section clearfix no_bg">
 
-
-                <h1>[[*pagetitle]]</h1>
+                {if 'pagetitle' ?}
+                <h1>{'pagetitle' | resource}</h1>
+                {/if}
 
                 <div class="hidden_for_revealing hidden_text_revealing">
-                    [[*content]]
 
-                    [[If?&subject=`[[*content]]`&operator=`notempty` &then=`<a class="reveal_all" href="#"><span><b>Показать полностью</b></span></a>` &else=``]]
+                    {'content' | resource}
+
+                    {if 'content' | resource ?}
+                        <a class="reveal_all" href="#"><span><b>Показать полностью</b></span></a>
+                    {/if}
 
                 </div>
 
@@ -52,35 +58,6 @@
                 'tplFilter.outer.default'=> 'dsmc.tpl.mFilter2.filter.outer'
                 'tplFilter.row.default'=> 'dsmc.tpl.mFilter2.filter.checkbox'
                 ]}
-
-
-                {*
-                {'!mFilter2' | snippet : [
-                'class' => 'msProduct',
-                'element' => 'msProducts',
-                'limit' => 24,
-                'tplOuter' => 'dsmc.tpl.mFilter2',
-                'tpl' => 'dsmc.tpl.row.product',
-                'includeTVs' => 'price,image,country,pop,hit,act,cat,notin,set,basket,weight,price_old'
-                'tvPrefix' => 'tv.',
-                'filters' => '
-                 ms|price:number,
-                 ms|made_in:country,
-                 msoption|promo,
-                 msoption|tag,
-                 msoption|group
-                ',
-                'sort' => 'resource|publishedon:desc'
-                'tplFilter.outer.default'=> 'dsmc.tpl.mFilter2.filter.outer'
-                'tplFilter.row.default'=> 'dsmc.tpl.mFilter2.filter.checkbox'
-                'tplFilter.outer.msoption|group'=> 'dsmc.tpl.mFilter2.filter.outer.notitle'
-                'tplFilter.outer.msoption|tag'=> 'dsmc.tpl.mFilter2.filter.outer.select'
-                'tplFilter.row.msoption|tag'=> 'dsmc.tpl.mFilter2.filter.option'
-                'tplFilter.outer.ms|price' => 'dsmc.tpl.mFilter2.filter.slider'
-                'tplFilter.row.ms|price' => 'dsmc.tpl.mFilter2.filter.number'
-                'tplFilter.row.ms|made_in' => 'tpl.mFilter2.filter.radio'
-                ]}
-                *}
 
             </div>
         </section>

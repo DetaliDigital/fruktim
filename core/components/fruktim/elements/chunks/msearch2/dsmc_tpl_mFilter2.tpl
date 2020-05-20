@@ -38,17 +38,17 @@
 
         <div class="catalog_wrap">
             <div class="catalog_block catalog_page_cat_block" id="mse2_results">
-                [[+results]]
+                {$results}
             </div>
         </div>
 
         <div class="pagination">
             <ul id="mse2_pagination">
-                [[!+page.nav]]
+                {'page.nav' | placeholeder}
             </ul>
         </div>
 
-        [[*content2]]
+        {$_modx->resource.content2}
 
         <br/>
 
@@ -70,8 +70,19 @@
                 <p class="filter_head"><span>Фильтр</span></p>
                 <a href="#" class="filter_close_toggler">Закрыть</a>
                 <div class="filter_item">
+                    {'!pdoMenu' | snippet : [
+                    'parents' => 8,
+                    'level' => 3,
+                    'outerClass' => 'nav_left_bar',
+                    'innerClass' => 'inner',
+                    'levelClass' => 'level',
+                    'firstClass' => '',
+                    'lastClass' => '',
+                    'parentClass' => 'submenu'
+                    'where' => ['isfolder' => 1]
+                    ]}
                     <form action="" method="post" id="mse2_filters">
-                        [[+filters]]
+                        {$filters}
                     </form>
                 </div>
             </div>

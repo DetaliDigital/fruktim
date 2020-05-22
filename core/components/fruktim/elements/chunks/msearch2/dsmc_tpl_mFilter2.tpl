@@ -44,7 +44,7 @@
 
         <div class="pagination">
             <ul id="mse2_pagination">
-                {'page.nav' | placeholeder}
+                {'page.nav' | placeholder}
             </ul>
         </div>
 

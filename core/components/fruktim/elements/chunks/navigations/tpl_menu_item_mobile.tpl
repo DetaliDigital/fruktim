@@ -14,8 +14,12 @@
                     <li>
                         <div class="sub_wrap_subdivision">
                             <div class="sub_wrap_subdivision_item">
-                                {if $cat.name != ''}
-                                    <p class="sub_wrap_title">{$cat.name}</p>
+                                {if $cat.link != ''}
+                                    <a href="{$cat.link | preg_replace:'/[^0-9]|/': '' | url}" class="sub_wrap_title">{$cat.name}</a>
+                                    {else}
+                                    {if $cat.name != ''}
+                                        <p class="sub_wrap_title">{$cat.name}</p>
+                                    {/if}
                                 {/if}
                                 {set $item_menu = $cat.item | fromJSON}
                                 {if $item_menu != ''}

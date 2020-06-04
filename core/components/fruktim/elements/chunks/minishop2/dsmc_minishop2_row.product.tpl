@@ -23,10 +23,11 @@
                     </p>
 
                     <div class="text_specs">
+
                         {if $availability == 1}
-                            <span class="in_stock many">В наличии</span
+                            <span class="in_stock many">В наличии</span>
                         {else}
-                            <span class="in_stock some">Нет наличии</span
+                            <span class="in_stock few">Нет наличии</span>
                         {/if}
                         <p>
                             {if $weight != 0}{$weight | grmscnvctr}{/if} {if $made_in ?}{if $weight != 0},{/if} {$made_in} {/if}

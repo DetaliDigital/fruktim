@@ -408,10 +408,28 @@ $(document).on('change', '#mse2_sort', function() {
 
 
 	//mark has_ul
-	$('.header_menu ul > li').add('.header_top_menu ul > li').each(function() {
+	$('.header_menu ul > li').add('.header_top_menu ul > li').add('.footer_menu ul > li').each(function() {
 		if ($(this).children('ul').length) {$(this).addClass('has_ul');}
 		if ($(this).children('.header_top_menu_dropdown').length) {$(this).addClass('has_dropdown');}
 		if ($(this).children('.header_menu_dropdown').length) {$(this).addClass('has_dropdown');}
+	});
+	
+	$('.nav_left_bar li').each(function() {
+		if ($(this).children('ul').length) {
+		    $(this).addClass('has_ul');
+		    $('<i class="menu_toggle"></i>').appendTo($(this).children('a'));
+		}
+	});
+	//--
+	
+	//nav_left_bar menu toggling
+	$('.nav_left_bar > li:not(.active) > ul').add('.nav_left_bar > li > ul > li:not(.active) > ul').slideUp(0);
+	
+	$('.nav_left_bar .menu_toggle').click(function(e) {
+	    e.stopPropagation();
+	    if ($(this).closest('li').hasClass('has_ul')) {e.preventDefault();}
+	    $(this).closest('li').toggleClass('active');
+	    $(this).closest('a').siblings('ul').slideToggle();
 	});
 	//--
 
@@ -434,12 +452,15 @@ $(document).on('change', '#mse2_sort', function() {
 
 
      //if ($(window).width() > 768) {
+     setTimeout(function() {
 		$('.catalog_page_cat_block .catalog_block_slider_item').matchHeight({
             byRow: true,
             property: 'height',
             target: null,
             remove: false
     	});
+     },1500);
+    	
     //}
 	//--
 
@@ -974,6 +995,15 @@ $(document).on('change', '#mse2_sort', function() {
 
 	}
 	//--
+	
+	
+	$('.slick-slider .catalog_block_slider_item').matchHeight({
+            byRow: true,
+            property: 'height',
+            target: null,
+            remove: false
+    });
+	
 
 	//stars mechanics
 	$('.stars span').wrap('<div></div>');
@@ -1156,98 +1186,109 @@ $(document).on('change', '#mse2_sort', function() {
 
 
 	//contacts map
-		if ($('#map').length) {
+	if ($('#map').length) {
 
-				ymaps.ready(init);
+				ymaps.ready(init0);
 
-				function init () {
-					// Создание экземпляра карты и его привязка к контейнеру с
-					// заданным id ("contacts_map")
-					var myMap = new ymaps.Map('map', {
-							// При инициализации карты, обязательно нужно указать
-							// ее центр и коэффициент масштабирования
-							center: [59.969580, 29.002128],
-							zoom: 9
-						});
+				function init0 () {
 
-					// Создание метки
-						myPlacemark1 = new ymaps.Placemark([59.826314, 29.937514]);
-						// Добавление метки на карту
+			    var map_center01 = parseFloat($('#map').attr('data-map-coords1'));
+            	var map_center02 = parseFloat($('#map').attr('data-map-coords2'));
 
-						/*
-						myMap.geoObjects.add(myPlacemark1);
-						myPlacemark1.options.set('iconImageHref', 'img/placemark.png');
-						myPlacemark1.options.set('iconImageSize', [21,37]);
-						myPlacemark1.options.set('iconImageOffset', [0,-37]);
+	            var pageMap0 = new ymaps.Map('map',{
+	                    center: [map_center01, map_center02],
+	                    zoom: 9,
+	                    controls:[]
+	            });
 
-						myPlacemark2 = new ymaps.Placemark([59.815832, 30.566133]);
-						// Добавление метки на карту
-						myMap.geoObjects.add(myPlacemark2);
-						myPlacemark2.options.set('iconImageHref', 'img/placemark.png');
-						myPlacemark2.options.set('iconImageSize', [21,37]);
-						myPlacemark2.options.set('iconImageOffset', [0,-37]);
+	            var theMapCluster0 = new ymaps.Clusterer();
+	            var imageHref0 = "./assets/templ/img/placemark1.png";
 
-						myPlacemark3 = new ymaps.Placemark([59.982099, 30.336125]);
-						// Добавление метки на карту
-						myMap.geoObjects.add(myPlacemark3);
-						myPlacemark3.options.set('iconImageHref', 'img/placemark.png');
-						myPlacemark3.options.set('iconImageSize', [21,37]);
-						myPlacemark3.options.set('iconImageOffset', [0,-37]);
-						*/
+            	$('.map_pin_list button').each(function() {
 
-					 myMap.controls.add("zoomControl", {
+            		imageHref0 = "./assets/templ/img/placemark1.png";
+            		if ($(this).hasClass('active')) {imageHref0 = "./img/placemark_active.png";}
+
+            		var pin_coord01 = parseFloat($(this).attr('data-pin-coords1'));
+            		var pin_coord02 = parseFloat($(this).attr('data-pin-coords2'));
+
+	                var placemark01 = new ymaps.Placemark([pin_coord01, pin_coord02],{
+	                    hintContent: ""
+	                },{
+	                    iconLayout:"default#image",
+	                    iconImageHref:imageHref0,
+	                    iconImageSize:[28,38],
+	                    iconImageOffset:[-14,-38]
+	                });
+
+
+	                pageMap0.geoObjects.add(placemark01);
+
+                });
+
+
+					 pageMap0.controls.add("zoomControl", {
 							position: {top: 35, left: 15}
 					 });
 
 				}
 		}
 
-
-		if ($('#contacts_map').length) {
+        
+        
+        
+        if ($('#contacts_map').length) {
 
 				ymaps.ready(init);
 
 				function init () {
-					// Создание экземпляра карты и его привязка к контейнеру с
-					// заданным id ("contacts_map")
-					var myMap = new ymaps.Map('contacts_map', {
-							// При инициализации карты, обязательно нужно указать
-							// ее центр и коэффициент масштабирования
-							center: [59.969580, 29.002128],
-							zoom: 9
-						});
 
-					// Создание метки
-						myPlacemark1 = new ymaps.Placemark([59.826314, 29.937514]);
-						// Добавление метки на карту
-						/*
-						myMap.geoObjects.add(myPlacemark1);
-						myPlacemark1.options.set('iconImageHref', 'img/placemark1.png');
-						myPlacemark1.options.set('iconImageSize', [28,38]);
-						myPlacemark1.options.set('iconImageOffset', [0,-38]);
+			        var map_center1 = parseFloat($('#contacts_map').attr('data-map-coords1'));
+            	var map_center2 = parseFloat($('#contacts_map').attr('data-map-coords2'));
 
-						myPlacemark2 = new ymaps.Placemark([59.815832, 30.566133]);
-						// Добавление метки на карту
-						myMap.geoObjects.add(myPlacemark2);
-						myPlacemark2.options.set('iconImageHref', 'img/placemark1.png');
-						myPlacemark2.options.set('iconImageSize', [28,38]);
-						myPlacemark2.options.set('iconImageOffset', [0,-38]);
+	            var pageMap = new ymaps.Map('contacts_map',{
+	                    center: [map_center1, map_center2],
+	                    zoom: 12,
+	                    controls:[]
+	            });
 
-						myPlacemark3 = new ymaps.Placemark([59.982099, 30.336125]);
-						// Добавление метки на карту
-						myMap.geoObjects.add(myPlacemark3);
-						myPlacemark3.options.set('iconImageHref', 'img/placemark1.png');
-						myPlacemark3.options.set('iconImageSize', [28,38]);
-						myPlacemark3.options.set('iconImageOffset', [0,-38]);
-						*/
+	            var theMapCluster = new ymaps.Clusterer();
+	            var imageHref = "./assets/templ/img/placemark1.png";
 
-					 myMap.controls.add("zoomControl", {
+            	$('.map_pin_list button').each(function() {
+
+            		imageHref = "./assets/templ/img/placemark1.png";
+            		if ($(this).hasClass('active')) {imageHref = "./img/placemark_active.png";}
+
+            		var pin_coord1 = parseFloat($(this).attr('data-pin-coords1'));
+            		var pin_coord2 = parseFloat($(this).attr('data-pin-coords2'));
+
+	                var placemark1 = new ymaps.Placemark([pin_coord1, pin_coord2],{
+	                    hintContent: ""
+	                },{
+	                    iconLayout:"default#image",
+	                    iconImageHref:imageHref,
+	                    iconImageSize:[28,38],
+	                    iconImageOffset:[-14,-38]
+	                });
+
+
+	                pageMap.geoObjects.add(placemark1);
+
+                });
+
+
+					 pageMap.controls.add("zoomControl", {
 							position: {top: 35, left: 15}
 					 });
 
 				}
 		}
 
+        
+        
+        
+        
 	//--
 
 

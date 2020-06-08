@@ -50,6 +50,17 @@
                   <p>
                     {$_modx->resource.introtext}
                   </p>
+                  {if $_modx->user.id > 0}
+                  {'!msProducts' | snippet : [
+                  'parents' => 'parent' | resource,
+                  'link' => 4,
+                  'sortby' => 'Data.weight'
+                  'master' => 'id' | resource,
+                  'tplWrapper' => 'dsmc.msProducts.packing.wrapper',
+                  'tpl' => 'dsmc.msProducts.packing.full',
+                  'wrapIfEmpty' => 0
+                  ]}
+                  {/if}
                 </div>
               </div>
             </div>

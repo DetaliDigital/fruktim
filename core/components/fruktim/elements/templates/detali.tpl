@@ -83,7 +83,11 @@
                   </p>
                   {if $_modx->resource.availability == 1}
                       <span class="in_stock many">В наличии</span> {else}
-                  <span class="in_stock few">Нет наличии</span>{/if}
+                  <span class="in_stock few">Нет наличии</span>
+                    <div class="price_block_bottom clearfix">
+                    <a href="#" class="one_click_ref"><span>Оставить запрос</span></a>
+                  </div>
+                  {/if}
                 </div>
 
                 <div class="price_block_content clearfix">
@@ -115,7 +119,12 @@
                 </div>
               </div>
               <div class="the_form one_click_form_block">
+
+                {if $_modx->resource.availability == 1}
                 {'!mvtForms2' | snippet : ['form'=>'oneclick']}
+                {else}
+                {'!mvtForms2' | snippet : ['form'=>'delivery_request']}
+                {/if}
 
                 <a href="#" class="close_ref"></a>
               </div>

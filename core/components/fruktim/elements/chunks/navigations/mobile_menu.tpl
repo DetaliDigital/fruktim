@@ -1,6 +1,8 @@
 <div class="ul_sub_wrap" data-toggle="katalog">
 
-    {'!pdoMenu' | snippet : [
+    {'!getCache' | snippet : [
+    'element' => 'pdoMenu'
+    'cacheKey' => 'getMenu'
     'parents' => 8,
     'tpl' => 'tpl.menu.item.mobile'
     'outerClass' => 'header_menu_mobile_sub_categories_ul has_icons clearafter'

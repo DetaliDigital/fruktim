@@ -1,4 +1,5 @@
 <footer itemscope itemtype="http://schema.org/Organization">
+
     <div class="footer_wrap">
         <div class="inner_section clearfix">
             <div class="footer_menu clearfix">
@@ -7,9 +8,12 @@
                         <li>
                             <a href="[[~59]]">Съедобные букеты</a>
 
-                            {'!pdoMenu' | snippet : [
+                            {'!getCache' | snippet : [
+                            'element' => 'pdoMenu'
+                            'cacheKey' => 'getMenu'
                             'parents' => '59',
-                            'level' => 1,
+                            'level' => 1
+                            'cache' => 1,
                             'outerClass' => 'nav_footer',
                             'innerClass' => 'inner',
                             'levelClass' => 'level',
@@ -23,9 +27,12 @@
                         <li>
                             <a href="[[~65]]">Фруктовые наборы</a>
 
-                            {'!pdoMenu' | snippet : [
+                            {'!getCache' | snippet : [
+                            'element' => 'pdoMenu'
+                            'cacheKey' => 'getMenu'
                             'parents' => '65',
                             'level' => 1,
+                            'cache' => 1,
                             'outerClass' => 'nav_footer',
                             'innerClass' => 'inner',
                             'levelClass' => 'level',
@@ -39,9 +46,12 @@
                         <li>
                             <a href="[[~588]]">Фрукты</a>
 
-                            {'!pdoMenu' | snippet : [
+                            {'!getCache' | snippet : [
+                            'element' => 'pdoMenu'
+                            'cacheKey' => 'getMenu'
                             'parents' => '588',
                             'level' => 1,
+                            'cache' => 1,
                             'outerClass' => 'nav_footer',
                             'innerClass' => 'inner',
                             'levelClass' => 'level',
@@ -65,9 +75,12 @@
                         <li>
                             <a href="[[~9]]">Орехи</a>
 
-                            {'!pdoMenu' | snippet : [
+                            {'!getCache' | snippet : [
+                            'element' => 'pdoMenu'
+                            'cacheKey' => 'getMenu'
                             'parents' => '9',
                             'level' => 1,
+                            'cache' => 1,
                             'outerClass' => 'nav_footer',
                             'innerClass' => 'inner',
                             'levelClass' => 'level',
@@ -100,9 +113,12 @@
                         <li>
                             <a href="[[~12]]">Сухофрукты</a>
 
-                            {'!pdoMenu' | snippet : [
+                            {'!getCache' | snippet : [
+                            'element' => 'pdoMenu'
+                            'cacheKey' => 'getMenu'
                             'parents' => '12',
                             'level' => 1,
+                            'cache' => 1,
                             'outerClass' => 'nav_footer',
                             'innerClass' => 'inner',
                             'levelClass' => 'level',
@@ -142,9 +158,12 @@
                         <li>
                             <a href="[[~615]]">Цукаты</a>
 
-                            {'!pdoMenu' | snippet : [
+                            {'!getCache' | snippet : [
+                            'element' => 'pdoMenu'
+                            'cacheKey' => 'getMenu'
                             'parents' => 615,
                             'level' => 1,
+                            'cache' => 1,
                             'outerClass' => 'nav_footer',
                             'innerClass' => 'inner',
                             'levelClass' => 'level',
@@ -160,9 +179,12 @@
                         <li>
                             <span>Меню</span>
 
-                            {'!pdoMenu' | snippet : [
+                            {'!getCache' | snippet : [
+                            'element' => 'pdoMenu'
+                            'cacheKey' => 'getMenu'
                             'parents' => 0,
                             'level' => 1,
+                            'cache' => 1,
                             'resources' => '4,5,7',
                             'outerClass' => 'nav_footer',
                             'innerClass' => 'inner',

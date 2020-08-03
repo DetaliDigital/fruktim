@@ -7,6 +7,7 @@
 [[$callback]]
 <div class="page_container inner_page_container bg_f4f4f4" id="top">
     [[$header_new]]
+
     <section class="main main_on_inner_pages">
         <div class="breadcrumbs_block">
             <div class="inner_section" itemprop="breadcrumb">
@@ -19,18 +20,23 @@
         <div class="card_top_panel_content inner_section">
           <div class="card_top_panel_inner">
             <div class="flags">
-              {if 'Хиты' in list $_modx->resource.promo}<a href="{'717' | url}" class="flag hit large">Хиты продаж</a>{/if}
-                {if 'Популярные' in list $_modx->resource.promo}<a href="{'718' | url}"  class="flag fav large">Популярный</a>{/if}
-                {if 'Акции' in list $_modx->resource.promo}<a href="{'719' | url}"  class="flag discount large">Акции</a>{/if}
+              {if 'Хиты' in list $_modx->resource.promo}<a href="{'717' | url}" class="flag hit large">
+                      Хиты продаж</a>{/if}
+                {if 'Популярные' in list $_modx->resource.promo}<a href="{'718' | url}"  class="flag fav large">
+                        Популярный</a>{/if}
+                {if 'Акции' in list $_modx->resource.promo}<a href="{'719' | url}"  class="flag discount large">
+                        Акции</a>{/if}
             </div>
           </div>
         </div>
       </div>
+
       <section class="the_content_section the_card_content_section padd_bottom0 bg_fff">
         <div class="inner_section clearfix">
           <div class="page-title">
           <h1 itemprop="name">{$_modx->resource.pagetitle}</h1>
-          <a class="msfavorites" data-click data-data-list="default" data-data-type="resource" data-data-key="{$_modx->resource.id}">
+          <a class="msfavorites" data-click data-data-list="default" data-data-type="resource"
+             data-data-key="{$_modx->resource.id}">
                 </a>
           </div>
           <div class="content_left_column">
@@ -48,43 +54,48 @@
                       {/if}
                   </div>
                   <p>
-                    {$_modx->resource.introtext}
+                    {'introtext' | resource}
                   </p>
-                  {if $_modx->user.id > 0}
+
+
                   {'!msProducts' | snippet : [
                   'parents' => 'parent' | resource,
                   'link' => 4,
                   'sortby' => 'Data.weight'
-                  'master' => 'id' | resource,
-                  'tplWrapper' => 'dsmc.msProducts.packing.wrapper',
-                  'tpl' => 'dsmc.msProducts.packing.full',
-                  'wrapIfEmpty' => 0
-                  ]}
-                  {/if}
+                    'master' => 'id' | resource,
+                    'tplWrapper' => 'dsmc.msProducts.packing.wrapper',
+                    'tpl' => 'dsmc.msProducts.packing.full',
+                    'wrapIfEmpty' => 0
+                    ]}
+
                 </div>
               </div>
             </div>
           </div>
 
+
             <!--/content_left_column-->
           <div class="content_right_column">
             <div class="content_right_column_in sticky_element">
               <div class="price_block shk-item active">
-                <div class="price_block_top" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><meta itemprop="priceCurrency" content="RUB" />
+                <div class="price_block_top" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><meta
+                            itemprop="priceCurrency" content="RUB"/>
                   <p class="price">
                     <span>
                       {if $_pls['old_price'] != 0}
                           <b class="old_price">{$_pls['old_price']} {'ms2_frontend_currency' | lexicon}</b>
                       {/if}
                         {if $_pls['price'] != 0}
-                            <b class="new_price"><u itemprop="price">{$_pls['price']}</u> {'ms2_frontend_currency' | lexicon}/{'ms2_frontend_count_unit' | lexicon} {if $_modx->resource.weight != 0}, {$_modx->resource.weight | grmscnvctr}{/if}</b>
+                            <b class="new_price"><u
+                                        itemprop="price">{$_pls['price']}</u> {'ms2_frontend_currency' | lexicon}/{'ms2_frontend_count_unit' | lexicon} {if $_modx->resource.weight != 0}, {$_modx->resource.weight | grmscnvctr}{/if}</b>
                         {/if}
                     </span>
                   </p>
                   {if $_modx->resource.availability == 1}
-                      <span class="in_stock many">В наличии</span> {else}
-                  <span class="in_stock few">Нет наличии</span>
-                    <div class="price_block_bottom clearfix">
+                      <span class="in_stock many">В наличии</span>
+                      {else}
+                      <span class="in_stock few">Нет наличии</span>
+                      <div class="price_block_bottom clearfix">
                     <a href="#" class="one_click_ref"><span>Оставить запрос</span></a>
                   </div>
                   {/if}
@@ -92,11 +103,43 @@
 
                 <div class="price_block_content clearfix">
                   <form class="ms2_form" method="post">
-                    <input type="hidden" name="id" value="{$_modx->resource.id}" />
+                    <input type="hidden" name="id" value="{$_modx->resource.id}"/>
                      {if $_modx->resource.availability == 1}
                          <fieldset>
-                      <input type="hidden" name="shk-id" value="{$_modx->resource.id}" />
-                      <div class="qty_wrap">
+                      <input type="hidden" name="shk-id" value="{$_modx->resource.id}"/>
+
+                             <div class="packing_wrap">
+                             <p>Другие фасовки</p>
+                             <div class="packing_div">
+                               <div class="sort_dropdown" id="sort_dropdown">
+
+                    {'!msProducts' | snippet : [
+                    'parents' => 'parent' | resource,
+                    'link' => 4,
+                    'limit' => 1,
+                    'sortby' => 'Data.weight'
+                    'master' => 'id' | resource,
+                    'tpl' => 'dsmc.msProducts.packing.label',
+                    'wrapIfEmpty' => 0
+                    ]}
+
+                    <span class="selectBox-arrow"><i class="fas fa-chevron-down" style="font-size:13px;"></i></span>
+                    <ul id="dropdown_menu" class="selectBox-dropdown-menu selectBox-options selectBox-options-bottom"
+                        style="display: none; max-height: 125.575px; position: absolute; top:95%; left:-1px; z-index:15; margin-left:0!important; border-color: #e4e4e4;">
+                        {'!msProducts' | snippet : [
+                        'parents' => 'parent' | resource,
+                        'link' => 4,
+                        'sortby' => 'Data.weight'
+                        'master' => 'id' | resource,
+                        'tpl' => 'dsmc.msProducts.packing.selector',
+                        'wrapIfEmpty' => 0
+                        ]}
+                    </ul>
+                </div>
+                             </div>
+                           </div>
+
+                           <div class="qty_wrap">
                         <p>Кол-во, {'ms2_frontend_count_unit' | lexicon}:</p>
                         <div class="qty_div">
                           <span class="minus"></span>
@@ -106,7 +149,9 @@
                       </div>
 
                       <div class="product-price">
-                        <button type="submit" onclick="ym(56381620, 'reachGoal', 'product_to_cart'); return true;" class="button to_cart_button" name="ms2_action" value="cart/add">{'ms2_frontend_add_to_cart' | lexicon}</button>
+                        <button type="submit" onclick="ym(56381620, 'reachGoal', 'product_to_cart'); return true;"
+                                class="button to_cart_button" name="ms2_action"
+                                value="cart/add">{'ms2_frontend_add_to_cart' | lexicon}</button>
                       </div>
                     </fieldset>
                      {/if}
@@ -121,18 +166,18 @@
               <div class="the_form one_click_form_block">
 
                 {if $_modx->resource.availability == 1}
-                {'!mvtForms2' | snippet : ['form'=>'oneclick']}
+                    {'!mvtForms2' | snippet : ['form'=>'oneclick']}
                 {else}
-                {'!mvtForms2' | snippet : ['form'=>'delivery_request']}
+                    {'!mvtForms2' | snippet : ['form'=>'delivery_request']}
                 {/if}
 
                 <a href="#" class="close_ref"></a>
               </div>
               <div class="the_form the_form_thanks">
                 <div class="the_form_thanks_content">
-                  <img src="assets/templ/img/thanks_icon1.png" alt="" />
+                  <img src="assets/templ/img/thanks_icon1.png" alt=""/>
                   <p class="thanks_title"><b>Спасибо</b>
-                    <br /> за ваш заказ!</p>
+                    <br/> за ваш заказ!</p>
                   <p>С вами в течении 30 минут свяжется наш менеджер</p>
                   <a href="#" class="close_ref"></a>
                 </div>
@@ -168,6 +213,7 @@
                       <h5 class="mb-3">Описание</h5>
                       {$_modx->resource.content}
                   {/if}
+
                     {'msProductOptionsGroup' | snippet : [
                     'tpl' => 'dsmc.tpl.msProductOptionsGroup',
                     'ignoreOptions' => 'ms_sostav_buketa'
@@ -204,7 +250,7 @@
 
 	        {'!looked' | snippet : [
             'tplOuter' => 'dsmc.lookedOuterTpl'
-            'tpl' => 'dsmc.tpl.row.product'
+        'tpl' => 'dsmc.tpl.row.product'
         ]
         }
 

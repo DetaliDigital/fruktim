@@ -1,6 +1,8 @@
-<a href="{$uri}" class="btn btn-packing">
-{if $weight != 0}{$weight | grmscnvctr}{/if}
-{*
-<span>Стоимость {$price} {'ms2_frontend_min_currency' | lexicon}</span>
-*}
-</a>
+<li class="list-item">
+    <a href="{$uri}">
+        {if $weight != 0}{$weight | grmscnvctr}{/if}
+        <span>
+            {$price} {$price | declension : 'рубль|рубля|рублей'}
+        </span>
+    </a>
+</li>

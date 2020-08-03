@@ -43,7 +43,8 @@ $(document).ready(function ($) {
          $(this).removeClass('is-invalid');
        });
 
-    $('.dsmc_input_phone').on('input', function() {
+    $('.dsmc_input_phone').on('input', function(e) {
+        e.preventDefault();
         $(this).val($(this).val().replace(/[-\.;":')(_=!"@#$%^&*%?A-Za-zА-Яа-яЁё]/, ''))
     });
 });

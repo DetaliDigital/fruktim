@@ -16,7 +16,7 @@
     </div>
 
     <div class="the_form_item">
-        <input type="text" name="{$formID}_phone" class="mvtFormPhone" placeholder="Номер телефона">
+        <input type="text" name="{$formID}_phone" class="dsmc_input_phone" placeholder="Номер телефона">
     </div>
 
     <div class="the_form_item">

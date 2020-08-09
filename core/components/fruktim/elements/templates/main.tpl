@@ -42,7 +42,7 @@
                         {/if}
 
                     </div>
-                    <div class="category_block">
+                    <div class="category_block category_block_mark2">
                         [[getImageList?&docid=`1`&tvname=`popular`&tpl=`@FILE:core/elements/chunks/items/categoryItem.tpl`]]
                     </div>
                 </div>

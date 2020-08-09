@@ -1,4 +1,4 @@
-<ul {$classes}>
+<ul{$classes}>
     <li>
         <button class="btn-close-menu">
             <svg viewBox="0 0 14 14" fill="none">

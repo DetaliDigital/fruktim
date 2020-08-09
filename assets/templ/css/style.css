@@ -16,7 +16,7 @@
     bottom: 0;
     background-color: rgba(123, 111, 111, 0.5);
     backdrop-filter: blur(4px);
-    z-index: 100;
+    z-index: 400;
 }
 .sort_dropdown{
     width: 198px;
@@ -230,7 +230,7 @@ header {
   background: #fff;
   padding: 0px 0 0px 0;
   position: relative;
-  z-index: 100;
+  z-index: 400;
 }
 
 .inner_header {
@@ -5771,13 +5771,13 @@ a.one_click_ref:hover {
   padding: 0 0 20px 0;
 }
 
-.qty_wrap p, .packing_wrap p {
+.qty_wrap p, .packing_wrap p  {
   display: inline-block;
   vertical-align: middle;
   width: 112px;
   padding: 0;
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: 600;
+  font-size: 15px;
   color: #282828;
 }
 
@@ -9284,6 +9284,11 @@ body a.button.delivery_block_button {
   bottom: -18px;
 }
 
+.the_tabs_content .payment_and_delivery_wrap > a.button {
+  position: absolute;
+  bottom: 80px;
+}
+
 .payment_and_delivery_block_mark2 .payment_and_delivery_wrap ul {
   list-style-image: url(../img/green_ul3.png) !important;
 }
@@ -10797,11 +10802,6 @@ background-image: linear-gradient(to right, transparent, transparent);background
   margin: 10px 0;
   display: block;
   }
-
-.section-packing b {
-  margin: 10px 0;
-  display: block;
-}
 
 .list {
   margin: 1rem 0;

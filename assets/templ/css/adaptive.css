@@ -521,8 +521,8 @@ background: url(../img/dropdown-head-line.png) no-repeat 0 bottom;}
 	.card_block .description {float: none;clear: both;width:100%;}
 	.content_right_column {    width: 274px;    max-width: 100%;    float: right;    position: absolute;    right: 55px;    top: 110px;    z-index: 10;}
 
-	.the_form_thanks {    height: 335px;}
-	.content_right_column .price_block {height: 335px;}
+	.the_form_thanks { height: 335px;}
+	.content_right_column .price_block {height: 100%;}
 	.content_right_column .one_click_form_block {    padding-top: 20px;    padding-bottom: 10px;}
 
 	.card_tabs .the_tabs_head a {    width: 220px;}

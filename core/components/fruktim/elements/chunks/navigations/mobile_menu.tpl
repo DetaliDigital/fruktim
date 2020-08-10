@@ -1,5 +1,6 @@
 {'!pdoMenu' | snippet : [
-'parents' => '8',
+'parents' => '8,-49,-59,-62,-907',
+'resources' => '-1213,-1214,-59,-49',
 'firstClass' => 'first',
 'lastClass' => '',
 'includeTVs' => 'dsmc_icon_item_menu',

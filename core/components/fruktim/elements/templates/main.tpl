@@ -172,10 +172,23 @@
             </div>
         </section>
 
+        {set $rows = json_decode(7 | resource : 'yandex_map', true)}
+        {set $i = 1}
+
         <section class="map_section">
 
-
-            <div class="map" id="map">
+            {foreach $rows as $row first=$first}
+            {set $coords = $row.address | split : ','}
+            {if $first}
+            <div class="map" id="map" data-map-coords1="{$coords[0]}" data-map-coords2="{$coords[1]}">
+            {/if}
+            {/foreach}
+                <div class="map_pin_list" style="width:0px;height:0px;overflow:hidden;padding:0;margin:0;opacity:0;">
+                    {foreach $rows as $row}
+                        {set $coords = $row.address | split : ','}
+                        <button data-pin-coords1="{$coords[0]}" data-pin-coords2="{$coords[1]}">{$i++}</button>
+                    {/foreach}
+                </div>
                 <div class="map_info">
                     <div class="inner_section">
                         <div class="the_tabs map_tabs">

@@ -24,6 +24,7 @@
 
 <link href="favlogo.png" rel="shortcut icon" type="image/x-icon" />
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/dmhendricks/bootstrap-grid-css@4.1.3/dist/css/bootstrap-grid.min.css" />
 <link href="assets/templ/css/jquery.fancybox.css" media="all" rel="stylesheet" type="text/css">
 <link type="text/css" rel="stylesheet" href="assets/templ/css/ezmark.css" />
 <link type="text/css" rel="stylesheet" href="assets/templ/css/slick.css" />

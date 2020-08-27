@@ -220,20 +220,26 @@
         </div>
       </section>
       <section class="catalog_section catalog_section_five_in_row">
-			{'!msProducts' | snippet : [
+			{'!msPreWrapperCase' | snippet : [
             'parents' => $_modx->resource.parent,
             'tplWrapper' => 'dsmc.wrapper.product'
-          'tpl' => 'dsmc.tpl.row.product'
-          'limit' => 10
-          ]}
+            'tpl' => 'dsmc.tpl.row.product'
+            'limit' => 10,
+            'wrapperPlaceholders' => [
+            'title' => 'Похожие',
+            'number_title' => 3,
+            'parent_link' => $_modx->resource.parent | url,
+            'carusel' => 0
+            ]
+            ]}
 	</section>
 	<section class="catalog_section catalog_section_five_in_row">
 
 	        {'!looked' | snippet : [
             'tplOuter' => 'dsmc.lookedOuterTpl'
-        'tpl' => 'dsmc.tpl.row.product'
-        ]
-        }
+            'tpl' => 'dsmc.tpl.row.product'
+            ]
+             }
 
 	</section>
 	</span>

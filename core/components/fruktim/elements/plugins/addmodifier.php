@@ -11,5 +11,13 @@ switch ($modx->event->name) {
                 return $modx->resource->getTVValue($input);
             }
         });
+        $fenom->addModifier('tv_superselect_get', function ($input,$option) use ($modx) {
+            if ($input) {
+                $value = explode(',' , $modx->resource->getTVValue($input));
+                $value = (preg_replace("/[^,.0-9]/", '', $value[0]));
+                $row = resource($value)->get($option);
+                return $row;
+            }
+        });
         break;
 }

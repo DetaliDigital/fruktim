@@ -67,7 +67,7 @@
     <div class="content_right_column to_left">
         <div class="filter_block">
             <div class="filter_block_inner">
-                <p class="filter_head"><span>Фильтр</span></p>
+                <p class="filter_head"><span>Категории</span></p>
                 <a href="#" class="filter_close_toggler">Закрыть</a>
                 <div class="filter_item">
                     {'!pdoMenu' | snippet : [

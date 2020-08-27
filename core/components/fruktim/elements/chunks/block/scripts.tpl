@@ -2,7 +2,6 @@
 {if 'id' | resource != 584 ?}
 {$_modx->regClientScript("assets/components/msminicartdynamic/js/web/msminicartdynamic.js")}
 {/if}
-{$_modx->regClientScript("assets/components/mvtforms2/js/web/mvtforms2.dsmc.js")}
 {$_modx->config.metrika}
 
 <script>
@@ -28,3 +27,5 @@
     // pls don't forget to change to your domain :)
     injectSvgSprite('assets/components/fruktim/icons/svg-sprite.svg');
 </script>
+
+{$_modx->regClientScript("assets/components/mvtforms2/js/web/mvtforms2.dsmc.js")}

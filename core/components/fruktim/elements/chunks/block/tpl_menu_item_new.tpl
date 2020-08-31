@@ -15,6 +15,6 @@
     'includeTVs' => 'dsmc_icon_item_menu,tv_menu_color',
     'tvPrefix' => '',
     'tplOuter' => '@INLINE {$wrapper}',
-    'tpl' => 'dsmc.pdomenu.ballon.row.li',
+    'tpl' => 'dsmc.pdomenu.ballon.row',
     ]}
 </div>

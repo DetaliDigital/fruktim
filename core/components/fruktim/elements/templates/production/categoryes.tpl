@@ -45,11 +45,17 @@
                     </nav>
                 </div>
 
+
+
                 {'!msPreWrapperCase' | snippet : [
-                'parents' => 588,
+                'snippet' => 'pdoResources',
+                'parents' => 8,
+                'resources' => 'tv_categories_landing_combo_preset_5' | tv | fromJSON | join,
                 'tplWrapper' => 'dsmc.msProducts.wrapper.categories'
                 'tpl' => 'dsmc.msProducts.row.category'
                 'limit' => 10,
+                'includeTVs' => 'tv_image_section_popular_category',
+                'tvPrefix' => ''
                 'wrapperPlaceholders' => [
                 'title' => 'Популярные категории',
                 ],

@@ -1,14 +1,8 @@
 <div class="catalog_block_slider_item">
     <div class="catalog_block_item catalog_block_item_mark2 shk-item">
         <div class="img">
-            <a href="{$id | url}"><img src="{$image | phpthumbon : 'w=300&h=300&bg=fff&fltr=wmi|/assets/templ/img/water-fruktim-300.png'}" alt=""/></a>
-
-            <div class="flags">
-                {if 'Хиты' in list $promo}<span class="flag hit"></span>{/if}
-                {if 'Популярные' in list $promo}<span class="flag fav"></span>{/if}
-                {if 'Акции' in list $promo}<span class="flag discount"></span>{/if}
-            </div>
-            <a class="msfavorites" data-click data-data-list="default" data-data-type="resource" data-data-key="{$id}">
+            <a href="{$id | url}">
+                <img src="{$image | phpthumbon : 'w=300&h=300&bg=fff&fltr=wmi|/assets/templ/img/water-fruktim-300.png'}" alt=""/>
             </a>
         </div>
         <form method="post" class="ms2_form">

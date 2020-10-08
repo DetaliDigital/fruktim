@@ -3,12 +3,12 @@
 <head>
     {include 'head'}
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/WebPage">
 {include 'callback'}
 <div class="page_container inner_page_container bg_f4f4f4" id="top">
     {include 'header_new'}
     <section class="main main_on_inner_pages">
-        <div class="breadcrumbs_block">
+        <div class="breadcrumbs_block" itemprop="breadcrumb">
             <div class="inner_section">
                 {'pdoCrumbs' | snippet : [
                 'tplWrapper' => '@INLINE <ul class="breadcrumbs">{$output}</ul>'
@@ -17,7 +17,7 @@
         </div>
 
         <section class="the_content_section the_card_content_section the_cat_content_section padd_bottom0 bg_fff">
-            <div class="inner_section clearfix no_bg">
+            <div class="inner_section clearfix no_bg" itemprop="mainContentOfPage">
 
                 {if 'pagetitle' ?}
                 <h1>{'pagetitle' | resource}</h1>
@@ -35,7 +35,7 @@
 
                 <div class="pop_cat_block">
 
-                    <nav class="hidden_for_revealing">
+                    <nav class="hidden_for_revealing fast-links-container">
                         {'!pdoMenu' | snippet : [
                         'tplOuter' => '@INLINE <p class="title">Популярные категории</p><ul>{$wrapper}</ul>'
                         'level' => 1

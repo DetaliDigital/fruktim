@@ -5,8 +5,8 @@
 
             <div class="the_tabs the_cart_form_tabs">
                 <div class="the_tabs_head">
-                    <a class="active" href="#tab1">Стандартное оформление</a>
-                    <a href="#tab2">Быстрое оформление</a>
+                    <button class="active" href="#tab1">Стандартное оформление</button>
+                    <button href="#tab2">Быстрое оформление</button>
                 </div>
 
                 <div class="the_tabs_content">

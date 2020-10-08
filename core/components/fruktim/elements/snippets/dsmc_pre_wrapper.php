@@ -1,5 +1,4 @@
 <?php
-
 if (empty($snippet)) {
     $snippet = 'msProducts';
 }

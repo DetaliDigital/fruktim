@@ -181,9 +181,9 @@
             <div class="the_tabs_head_wrap">
               <div class="the_tabs_head_content">
                 <div class="the_tabs_head">
-                  <a class="active" href="#"><span>Описание товара</span></a>
-                  <a href="#"><span>О магазине</span></a>
-                  <a href="#"><span>Доставка и оплата</span></a>
+                  <button class="active"><span>Описание товара</span></button>
+                  <button><span>О магазине</span></button>
+                  <button><span>Доставка и оплата</span></button>
                 </div>
               </div>
             </div>

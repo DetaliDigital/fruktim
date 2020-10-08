@@ -19,18 +19,19 @@
                             'levelClass' => 'level',
                             'firstClass' => '',
                             'lastClass' => '',
-                            'limit' => '7',
+                            'limit' => '10',
                             'parentClass' => 'column'
                             ]}
                         </li>
-
+                        
+                                                
                         <li>
-                            <a href="[[~65]]">Фруктовые наборы</a>
+                            <a href="[[~49]]">Фруктовые коробки</a>
 
                             {'!getCache' | snippet : [
                             'element' => 'pdoMenu'
                             'cacheKey' => 'getMenu'
-                            'parents' => '65',
+                            'parents' => '49',
                             'level' => 1,
                             'cache' => 1,
                             'outerClass' => 'nav_footer',
@@ -42,9 +43,45 @@
                             'parentClass' => 'column'
                             ]}
                         </li>
+                        
+                      <li>
+                            <a href="[[~1214]]">Мелкий опт</a>
 
+                        </li>
                         <li>
-                            <a href="[[~588]]">Фрукты</a>
+                            <a href="[[~1215]]">HoReCa</a>
+
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <div class="footer_menu_column">
+                    <ul>
+                                                
+                        <li>
+                            <a href="[[~1213]]">Подарочные наборы</a>
+                            
+                            {'!getCache' | snippet : [
+                            'element' => 'pdoMenu'
+                            'cacheKey' => 'getMenu'
+                            'parents' => '1213',
+                            'level' => 1,
+                            'cache' => 1,
+                            'outerClass' => 'nav_footer',
+                            'innerClass' => 'inner',
+                            'levelClass' => 'level',
+                            'firstClass' => '',
+                            'lastClass' => '',
+                            'limit' => '4',
+                            'parentClass' => 'column'
+                            ]}
+
+                        </li>
+
+                        
+                         <li>
+                            <a href="[[~1413]]">Фрукты</a>
 
                             {'!getCache' | snippet : [
                             'element' => 'pdoMenu'
@@ -57,22 +94,40 @@
                             'levelClass' => 'level',
                             'firstClass' => '',
                             'lastClass' => '',
-                            'limit' => '2',
+                            'limit' => '6',
                             'parentClass' => 'column'
                             ]}
                         </li>
 
+                        
                         <li>
-                            <a href="[[~57]]">Овощи</a>
-
+                            <a href="[[~10]]">Овощи</a>
+                            
+                            {'!getCache' | snippet : [
+                            'element' => 'pdoMenu'
+                            'cacheKey' => 'getMenu'
+                            'parents' => '10',
+                            'level' => 1,
+                            'cache' => 1,
+                            'outerClass' => 'nav_footer',
+                            'innerClass' => 'inner',
+                            'levelClass' => 'level',
+                            'firstClass' => '',
+                            'lastClass' => '',
+                            'limit' => '5',
+                            'parentClass' => 'column'
+                            ]}
 
                         </li>
+
+ 
                     </ul>
                 </div>
 
                 <div class="footer_menu_column">
                     <ul>
-                        <li>
+ 
+                         <li>
                             <a href="[[~9]]">Орехи</a>
 
                             {'!getCache' | snippet : [
@@ -86,30 +141,11 @@
                             'levelClass' => 'level',
                             'firstClass' => '',
                             'lastClass' => '',
+                            'limit' => '10',
                             'parentClass' => 'column'
                             ]}
                         </li>
-
-                        <li>
-                            <a href="[[~56]]">Ягоды</a>
-
-                        </li>
-
-                        <li>
-                            <a href="[[~590]]">Грибы</a>
-
-                        </li>
-
-                        <li>
-                            <a href="[[~387]]">Варенье</a>
-
-
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="footer_menu_column">
-                    <ul>
+                        
                         <li>
                             <a href="[[~12]]">Сухофрукты</a>
 
@@ -124,15 +160,17 @@
                             'levelClass' => 'level',
                             'firstClass' => '',
                             'lastClass' => '',
-                            'limit' => '12',
+                            'limit' => '6',
                             'parentClass' => 'column'
                             ]}
                         </li>
+                        
 
-                        <li>
-                            <a href="[[~64]]">Специи</a>
+                    </ul>
+                </div>
 
-                        </li>
+                <div class="footer_menu_column">
+                    <ul>
 
                         <li>
                             <a href="[[~13]]">Чай</a>
@@ -140,21 +178,29 @@
                         </li>
 
                         <li>
-                            <a href="[[~172]]">Мед</a>
-
-
-                        </li>
-
-                        <li>
                             <a href="[[~11]]">Сладости</a>
+                            
+                            {'!getCache' | snippet : [
+                            'element' => 'pdoMenu'
+                            'cacheKey' => 'getMenu'
+                            'parents' => 11,
+                            'level' => 1,
+                            'cache' => 1,
+                            'outerClass' => 'nav_footer',
+                            'innerClass' => 'inner',
+                            'levelClass' => 'level',
+                            'firstClass' => '',
+                            'lastClass' => '',
+                            'limit' => '5',
+                            'parentClass' => 'column'
+                            'where' => ['isfolder' => 1]
+                            ]}
 
 
                         </li>
-                    </ul>
-                </div>
+                        
 
-                <div class="footer_menu_column">
-                    <ul>
+
                         <li>
                             <a href="[[~615]]">Цукаты</a>
 
@@ -169,12 +215,11 @@
                             'levelClass' => 'level',
                             'firstClass' => '',
                             'lastClass' => '',
+                            'limit' => '5',
                             'parentClass' => 'column'
                             'where' => ['isfolder' => 1]
                             ]}
                         </li>
-
-
 
                         <li>
                             <span>Меню</span>

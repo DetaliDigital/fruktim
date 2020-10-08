@@ -18,7 +18,7 @@
 
     {include 'header_new'}
 
-    <section class="main">
+    <section class="main" itemscope itemtype="http://schema.org/WebPage">
 
         {include 'banner_top'}
 
@@ -42,7 +42,7 @@
                         {/if}
 
                     </div>
-                    <div class="category_block category_block_mark2">
+                    <div class="category_block_mark2 main-page-popular-category">
                         [[getImageList?&docid=`1`&tvname=`popular`&tpl=`@FILE:core/elements/chunks/items/categoryItem.tpl`]]
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                 <div class="category_section_right">
 
                     <div class="category_section_right_article">
-                        <article>
+                        <article itemprop="mainContentOfPage">
                             {if 'longtitle' | resource ?}
                                 <p class="title">{'longtitle' | resource}</p>
                             {/if}
@@ -63,7 +63,7 @@
 
 
         <section class="catalog_section main_actions_catalog_section">
-            <div class="inner_section clearfix">
+            <div class="inner_section">
 
 
                 <div class="main_actions_right">
@@ -77,7 +77,7 @@
                 </div>
 
                 <div class="main_actions_left">
-                    <div class="catalog_block">
+                    <div class="catalog_block slider">
 
                         {'msProducts' | snippet : [
                         'depth' => 3,
@@ -100,13 +100,13 @@
                     <p class="section_title centered no_decor"><span></span>{'title3' | tv}</p>
                 </div>
 
-                <div class="catalog_block">
+                <div class="catalog_block wr-consumer slider">
 
                     {'msProducts' | snippet : [
                     'depth' => 3,
                     'tpl' => 'dsmc.tpl.row.product',
                     'parents' => 8,
-                    'limit' => 8,
+                    'limit' => 10,
                     'resources' => 'prod_main_id2' | tv
                     ]}
 

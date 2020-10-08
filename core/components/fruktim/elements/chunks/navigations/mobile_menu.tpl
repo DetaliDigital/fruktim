@@ -1,6 +1,7 @@
+{set $parent = '8,' ~ ('-49' | dsmc_parent_child) ~ ',' ~ ('-59' | dsmc_parent_child) ~ ',' ~ ('-1213' | dsmc_parent_child) ~ ',' ~ ('-1214' | dsmc_parent_child)}
+
 {'!pdoMenu' | snippet : [
-'parents' => '8,-49,-59,-62,-907',
-'resources' => '-1213,-1214,-59,-49',
+'parents' => $parent,
 'firstClass' => 'first',
 'lastClass' => '',
 'includeTVs' => 'dsmc_icon_item_menu',

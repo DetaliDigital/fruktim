@@ -30,7 +30,6 @@
             </div>
         </section>
 
-
         <section class="category_section">
             <div class="inner_section clearfix">
 

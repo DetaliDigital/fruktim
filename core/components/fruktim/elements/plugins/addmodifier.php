@@ -19,5 +19,27 @@ switch ($modx->event->name) {
                 return $row;
             }
         });
+
+        $fenom->addModifier('dsmc_parent_child', function ($input) use ($modx) {
+
+            $id = str_replace('-', '', $input);
+            $ids = $modx->getChildIds($id, '6', ['context' => 'web']);
+
+            $data = array();
+
+            $q = $modx->newQuery('modResource', ['id:IN' => $ids, 'isfolder' => true, 'published' => true, 'deleted' => false]);
+            $q->select('id');
+
+            if ($q->prepare() && $q->stmt->execute()) {
+                while ($row = $q->stmt->fetch(PDO::FETCH_ASSOC)) {
+                    $data[] = '-' . $row['id'];
+                }
+            }
+
+            $output = implode(',' , $data);
+
+            return $input . ',' . $output;
+
+        });
         break;
 }

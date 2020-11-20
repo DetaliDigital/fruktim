@@ -49,7 +49,7 @@
                                                             {$checked ? 'checked' : ''}>
                                                     <span><b>{$delivery.name}</b>
                                                         {if $delivery.description?}
-                                                            <i>
+                                                           <i>
                                                                 {$delivery.description}
                                                            </i>
                                                         {/if}</span>
@@ -108,7 +108,7 @@
 																	Я согласен с <a href="policy/" rel="nofollow">правилами</a>
 																	политики конфиденциальности
 																</span></label>
-                                            <button type="submit" name="ms2_action" value="order/submit" class="btn btn-lg btn-primary ml-md-2 ms2_link">
+                                            <button type="submit" name="ms2_action" value="order/submit" class="btn btn-lg btn-primary ml-md-2 ms2_link button to_cart_button">
                                                 {'ms2_frontend_order_submit' | lexicon}
                                             </button>
                                         </div>

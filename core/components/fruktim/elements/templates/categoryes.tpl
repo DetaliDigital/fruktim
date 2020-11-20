@@ -55,8 +55,9 @@
             'snippet' => 'pdoResources',
             'parents' => 8,
             'resources' => 'tv_categories_landing_combo_preset_5' | tv | fromJSON | join,
-            'tplWrapper' => 'dsmc.msProducts.wrapper.categories'
-            'tpl' => 'dsmc.msProducts.row.category'
+            'tplWrapper' => 'dsmc.msProducts.wrapper.categories',
+            'wrapIfEmpty' => 0,
+            'tpl' => 'dsmc.msProducts.row.category',
             'limit' => 12,
             'includeTVs' => 'tv_image_section_popular_category',
             'tvPrefix' => ''
@@ -68,7 +69,8 @@
 
             {'!msPreWrapperCase' | snippet : [
             'parents' => 'tv_categories_landing_combo_preset_1' | tv | fromJSON | join,
-            'tplWrapper' => 'dsmc.wrapper.product'
+            'tplWrapper' => 'dsmc.wrapper.product',
+            'wrapIfEmpty' => 0,
             'tpl' => 'dsmc.tpl.row.product'
             'limit' => 10,
             'wrapperPlaceholders' => [
@@ -78,13 +80,17 @@
             'carusel' => 0
             ],
             'optionFilters' => [
-            'taxonomy_product' => 'landing'
-            ] | json_encode
-            ]}
+            'taxonomy_product' => 'landing',
+            ] | json_encode,
+            'sortby' => [
+            'menuindex' => 'ASC'
+            ]]
+            }
 
             {'!msPreWrapperCase' | snippet : [
             'parents' => 'tv_categories_landing_combo_preset_2' | tv | fromJSON | join,
-            'tplWrapper' => 'dsmc.wrapper.product'
+            'tplWrapper' => 'dsmc.wrapper.product',
+            'wrapIfEmpty' => 0,
             'tpl' => 'dsmc.tpl.row.product'
             'limit' => 10,
             'wrapperPlaceholders' => [
@@ -94,9 +100,11 @@
             'carusel' => 0
             ],
             'optionFilters' => [
-            'taxonomy_product' => 'landing'
+            'taxonomy_product' => 'landing',
             ] | json_encode
-            ]}
+            'sortby' => [
+            'menuindex' => 'ASC'
+            ]]}
 
             <section class="wr-opt">
                 <div class="container p-0">
@@ -141,7 +149,9 @@
             'optionFilters' => [
             'taxonomy_product' => 'landing'
             ] | json_encode
-            ]}
+            'sortby' => [
+            'menuindex' => 'ASC'
+            ]]}
 
             {'!msPreWrapperCase' | snippet : [
             'parents' => 'tv_categories_landing_combo_preset_4' | tv | fromJSON | join,
@@ -157,7 +167,9 @@
             'optionFilters' => [
             'taxonomy_product' => 'landing'
             ] | json_encode
-            ]}
+            'sortby' => [
+            'menuindex' => 'ASC'
+            ]]}
             {'!infoBlock' | snippet : [
             'id' => 1
             ]}

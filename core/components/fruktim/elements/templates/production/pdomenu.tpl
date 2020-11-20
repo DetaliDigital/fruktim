@@ -1,3 +1,4 @@
+<pre>
 {'!pdoMenu' | snippet : [
 'parents' => 8,
 'firstClass' => 'first',
@@ -7,16 +8,15 @@
 'innerClass' => 'aside-sub-menu',
 'parentClass' => 'toggle-left'
 'rowClass' => 'katalog',
+'tpl' => '',
+'first' => 1,
+'tplParentRow' => ''
 'where' => [
 'class_key:!=' => 'msProduct',
 ],
 ]}
-
+</pre>
 <hr>
-[[-
--59,-49,-1213,-1214
-
-]]
 
 {'!pdoMenu' | snippet : [
 'parents' => '8,-49,-59,-62,-907',

@@ -2,7 +2,7 @@
 
 {'!pdoMenu' | snippet : [
 'parents' => $parent,
-'firstClass' => 'first',
+'firstClass' => '',
 'lastClass' => '',
 'includeTVs' => 'dsmc_icon_item_menu',
 'outerClass' => 'aside-menu',

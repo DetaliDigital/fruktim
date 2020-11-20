@@ -24,9 +24,11 @@
 
 <link href="favlogo.png" rel="shortcut icon" type="image/x-icon" />
 
-{if 'template' | resource == '21'}
+
+{if 'template' | resource == '21' || 'template' | resource == 22}
 <link rel="stylesheet" href="assets/templ/css/bootstrap-grid.css" />
 {/if}
+
 <link href="assets/templ/css/jquery.fancybox.css" media="all" rel="stylesheet" type="text/css">
 <link type="text/css" rel="stylesheet" href="assets/templ/css/ezmark.css" />
 <link type="text/css" rel="stylesheet" href="assets/templ/css/slick.css" />

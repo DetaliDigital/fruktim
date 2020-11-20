@@ -244,6 +244,7 @@
 	</section>
 	</span>
     </section>
+
     {include 'footer'}
 </div>
 {include 'scripts'}

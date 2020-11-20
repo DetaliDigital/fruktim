@@ -1,3 +1,8 @@
+{if $level > 1 && $idx == 1}
+<li class="go_category_item">
+    <a href="{$parent | url}" class="go_category_item">Смотреть все</a>
+</li>
+{/if}
 <li{$classes}>
     <a href="{$link}" {$attributes}>
         {if $dsmc_icon_item_menu ?}
@@ -7,9 +12,11 @@
         {/if}
         <span>{$menutitle}</span>
     </a>
-    {if $level > 1 && $last ?}
-    <li class="go_category_item">
-        <a href="{$parent | url}" class="go_category_item">Смотреть все</a>
-    </li>
-    {/if}
 </li>
+{*
+{if $level > 1 && $last ?}
+<li class="go_category_item">
+    <a href="{$parent | url}" class="go_category_item">Смотреть все</a>
+</li>
+{/if}
+*}

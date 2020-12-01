@@ -3,6 +3,44 @@
   padding: 0;
 }
 
+@font-face {
+font-family: 'icomoon';
+font-family: 'icomoon';
+src:  url('../fonts/icomoon.eot?5endtx');
+src:  url('../fonts/icomoon.eot?5endtx#iefix') format('embedded-opentype'),
+url('../fonts/icomoon.ttf?5endtx') format('truetype'),
+url('../fonts/icomoon.woff?5endtx') format('woff'),
+url('../fonts/icomoon.svg?5endtx#icomoon') format('svg');
+font-weight: normal;
+font-style: normal;
+font-display: block;
+}
+
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jivo .path1:before {
+  content: "\e911";
+}
+.icon-jivo .path2:before {
+  content: "\e912";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+
 .mobile_menu_is_open {
     position: relative;
 }
@@ -11421,3 +11459,128 @@ background-image: linear-gradient(to right, transparent, transparent);background
 .bottom_horizontal_form .the_form_item input[type="submit"]:hover, .bottom_horizontal_form .the_form_item [type="submit"]:hover, .bottom_horizontal_form .the_form_item_submit button:hover {background: #369429;}
 .no_margin_bottom {margin-bottom:0 !important;}
 
+
+/* * =================================================== * Back to top * =================================================== */
+.back-to-top {
+  background: #ed0648;
+  color: #fff;
+  display: flex;
+  border-radius: 50%;
+  width: 2.71428571rem;
+  height: 2.71428571rem;
+  justify-content: center;
+  align-items: center;
+}
+.back-to-top.on-up {
+  transition: all 0.25s ease;
+  position: fixed;
+  z-index: 1000 !important;
+  bottom: 25px;
+  right: -100px;
+  cursor: pointer;
+}
+
+.back-to-top.on-up a {
+  text-decoration: none;
+}
+
+.back-to-top.on-up.active {
+  right: 15px;
+}
+.back-to-top.on-up.active:hover {
+  right: 15px;
+  bottom: 30px;
+}
+
+.share-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: url(#goo);
+  z-index: 1000 !important;
+}
+.share-button.on-up {
+  transition: all 0.25s ease;
+  position: fixed;
+  z-index: 15;
+  bottom: 95px;
+  right: -150px;
+  cursor: pointer;
+}
+.share-button.on-up.active {
+  right: 15px;
+}
+.share-button.on-up.active:not(.open):hover {
+  right: 15px;
+  bottom: 100px;
+}
+.share-button .item {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 50%;
+  width: 2.71428571rem;
+  height: 2.71428571rem;
+  font-size: 1.9rem;
+  background-color: #ed0648;
+  color: #fff;
+  transition: all 400ms ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.share-button .item:nth-child(1) {
+  transition-delay: 0ms;
+  background-color: #43d854;
+}
+.share-button .item:nth-child(2) {
+  transition-delay: 150ms;
+  background-color: #bc27ab;
+}
+.share-button .item:nth-child(3) {
+  transition-delay: 300ms;
+  background-color: #2f2847;
+}
+.share-button .open_share {
+  transform: scale(1.2);
+  transition: all 700ms ease-out;
+}
+.open .open_share {
+  transform: scale(0.9);
+  transition: all 700ms ease-out;
+}
+.open .item:nth-child(1) {
+  transform: translate(-55px, -25px);
+}
+.open .item:not(:last-child):hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+.open .item:nth-child(2) {
+  transform: translate(0, -60px);
+  transition-delay: 150ms;
+  background-color: 0;
+}
+.open .item:nth-child(3) {
+  transform: translate(-60px, 40px);
+  transition-delay: 300ms;
+}
+#jvlabelWrap {
+  bottom: -40px !important;
+}
+body .__jivoMobileButton {
+  display: none !important;
+}
+.share-block-absolute {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}

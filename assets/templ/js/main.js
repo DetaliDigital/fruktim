@@ -2428,3 +2428,43 @@ $(document).mouseup(function (e) {
         }
     }
 });
+$(document).ready(function ($) {
+// =====================================================
+//    Кнопка на вверх
+// =====================================================
+
+$(window).scroll(function () {
+	if ($(this).scrollTop() > $(this).height()) {
+		$(".on-up").addClass("active");
+	} else {
+		$(".on-up").removeClass("active");
+	}
+});
+
+$(".on-up.top").click(function () {
+	$("html, body").stop().animate({scrollTop: 0}, "slow", "swing");
+});
+
+// =====================================================
+//    Social buttons
+// =====================================================
+
+var share = document.querySelector('.share-button');
+var isOpened = false;
+document.querySelector('.open_share').addEventListener('click', function(){
+	if(!isOpened){
+		share.classList.add('open');
+		isOpened = true;
+	}
+	else{
+		share.classList.remove('open');
+		isOpened = false;
+	}
+});
+
+var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+if (is_safari) {
+	$('feGaussianBlur').attr('stdDeviation', 0);
+}
+});

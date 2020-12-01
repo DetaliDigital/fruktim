@@ -258,7 +258,9 @@
     </div>
 </footer>
 
+{*
 <a href="#top" class="to_top"><img src="assets/templ/img/to_top.png" alt="Наверх" /></a>
+*}
 
 <div class="popup thanks_popup" id="thanks_popup">
     <div class="the_form">

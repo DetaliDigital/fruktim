@@ -525,6 +525,33 @@ background: url(../img/dropdown-head-line.png) no-repeat 0 bottom;}
     footer .footer_left {width:270px;}
     .footer_contacts {width:300px;}
     .footer_column.footer_column_contacts {max-width:100%;}
+    
+    .opto_page_description {margin-bottom:45px;}
+    .opto_page_description .img {width:49%;margin-left:0;}
+    .opto_page_description .text {    padding-top: 25px;    width: 46%;}
+    .opto_page_description .text button {font-size:25px;width:330px;max-width:100%;letter-spacing:1px;}
+    .opto_page_description .text p {font-size:17px;}
+    
+    .benefits_item {width:50%;margin-bottom:27px;}
+    .text_benefits_item {width:49%;margin-bottom:20px;}
+    
+    .opto_page_contacts_item:nth-child(1) {width:100%;}
+    .opto_page_contacts_item:nth-child(2) {width:45%;}
+    .opto_page_contacts_item:nth-child(3) {width:55%;}
+    .opto_page_contacts .opto_page_contacts_item .title {width:390px;max-width:100%;padding:0 0 22px 0;}
+    
+    .bottom_horizontal_form .the_form_item_half {width:48.5%;}
+    
+    .the_form_fields_wrap {display:flex;flex-wrap:wrap;flex-direction:row;justify-content:flex-start;align-items:flex-start;}
+    .the_form_fields_wrap .the_form_item_wrap {float:none;margin-bottom:5px;}
+    .bottom_horizontal_form .the_form_item_submit {float:none;margin-right:40px;margin-left: 0;}
+    .bottom_horizontal_form .the_form_item.the_form_item_accept {width:auto;padding-top:15px;}
+    .bottom_horizontal_form p.form_title {margin-bottom:20px;}
+    .bottom_horizontal_form_wrap {padding-bottom:10px;margin-bottom:10px;}
+    .benefits_block .benefits_item .text p {padding-right:20px;}
+    
+    .opto_page_contacts_item_social {margin-left:0;}
+    .bottom_horizontal_form .the_form_item_textarea {margin-bottom:20px;}
 
 }
 
@@ -1181,7 +1208,53 @@ background: url(../img/dropdown-head-line.png) no-repeat 0 bottom;}
     
     .filter_item_div {    max-width: 86%;}
     
+    
+   
+    
+    
 }
+
+
+@media only screen and (max-width:767px) {
+    
+      .opto_page_description .img {order:2;margin:0 auto;width:100%;}
+    .opto_page_description .img img {max-width:95%;}
+    .opto_page_description .text {order:1;width:100%;padding:20px 0 15px 0;}
+    .opto_page_description .text button {width:202px;height:77px;line-height:1.1em;font-size:25px;padding-top:0px;box-sizing:border-box;margin:0 auto 15px;}
+    .opto_page_description .text p {font-size:15px;text-align:center;padding-left:0;}
+    .the_content_section.article_content .inner_section.no_margin_bottom h1 {text-align:center;display:block;}
+    
+    .benefits_wrap {text-align:center;}
+    .benefits_wrap h2 {padding-bottom:35px;}
+    .benefits_item {    width: 100%;    margin-bottom: 20px;text-align:left;}
+    .text_benefits_item {    width: 100%;    margin-bottom: 10px;    text-align: left;height: auto;    min-height: 0;}
+    .text_benefits .text_benefits_item p {padding-bottom:0;}
+    .text_benefits {padding-bottom:15px;}
+    .opto_page_contacts_item:nth-child(2) {    width: 220px;text-align:left;margin-bottom:30px;}
+    .opto_page_contacts_item:nth-child(3) {    width: 220px;text-align:left;    padding-left: 10px;box-sizing:border-box;}
+    .opto_page_contacts .opto_page_contacts_item .title {font-size:20px;line-height:1.2em;}
+    .opto_page_contacts {padding-bottom:15px;margin-bottom:20px;}
+    
+    .bottom_horizontal_form .the_form_item_half {    width: 100%;} 
+    .bottom_horizontal_form .the_form_item.the_form_item_accept {order:3;padding-top: 0;margin-bottom:19px;}
+    .bottom_horizontal_form .the_form_item_submit {order:4;width: 100%;    max-width: 440px;    margin: 0 auto 10px;}
+    .the_form_fields_wrap .the_form_item_wrap {    margin-bottom: 0px;}
+    .bottom_horizontal_form .the_form_item.the_form_item_accept label span {width:180px;}
+    .bottom_horizontal_form .the_form_item input[type="submit"], .bottom_horizontal_form .the_form_item [type="submit"], .bottom_horizontal_form .the_form_item_submit button {width:100%;}
+    .bottom_horizontal_form .checkbox1_label svg {margin-right:12px;}
+    .bottom_horizontal_form p.form_title {text-align:center;}
+    .bottom_horizontal_form p.form_title span {text-align:center;}
+    
+    .center_on_mobile {text-align:center !important;display: block !important;}
+    
+    .opto_page_contacts_item_social a {width:26px;margin-left:2px;margin-right:2px;}
+    .opto_page_contacts_item_social {margin:0 auto;}
+    .bottom_horizontal_form .the_form_item textarea {padding-top:5px;}
+    
+}
+
+
+
 @media only screen and (max-width:670px) {
     .card-body {
         padding-right: 15px;
@@ -1295,7 +1368,12 @@ background: url(../img/dropdown-head-line.png) no-repeat 0 bottom;}
 	.delivery_cart_form_block p.title {font-size: 19px;}
 	.the_cart_form .the_cart_form_block_submit label span {    max-width: 180px;}
 	.the_cart_form .the_cart_form_block_submit label span {font-size: 12px;line-height: 16px;}
-
+    
+    .benefits_item .icon {margin-right:10px;width:65px;height:65px;}
+    .bottom_horizontal_form p.form_title b {font-size:25px;}
+    
+    
+    
 }
 
 

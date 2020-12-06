@@ -11416,7 +11416,7 @@ background-image: linear-gradient(to right, transparent, transparent);background
 .benefits_item .icon5 {background-image:url(../img/white-icon5.svg);}
 .benefits_item .icon6 {background-image:url(../img/white-icon6.svg);}
 .benefits_item .text {width:210px;display:inline-block;vertical-align:middle;}
-.benefits_block .benefits_item .text p {font-size:15px;line-height:1.6em;color:#000;padding:0;}
+.benefits_block .benefits_item .text p {font-size:15px;line-height:1.6em;color:#000;padding:0;    width: 200px;    max-width: 100%;}
 .benefits_block .benefits_item .text p b {color: #ec0449;}
 
 .text_benefits {clear: both;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center;padding-bottom:50px;}
@@ -11439,7 +11439,7 @@ background-image: linear-gradient(to right, transparent, transparent);background
 .opto_page_contacts .mail_icon_p a {font-weight:500;color: #F7074C;}
 .opto_page_contacts .mail_icon_p a:hover {text-decoration:none;}
 
-.bottom_horizontal_form_wrap {border: 1px solid #ECECEC;box-sizing: border-box;border-radius: 15px;box-sizing:border-box;padding:29px 29px;clear:both;margin-bottom:20px;}
+.bottom_horizontal_form_wrap {border: 1px solid #ECECEC;box-sizing: border-box;border-radius: 15px;box-sizing:border-box;padding:29px 29px;clear:both;margin-bottom:50px;}
 .bottom_horizontal_form {width:100%;}
 .bottom_horizontal_form p.form_title {padding:0 0 0px 0;text-align:left;margin-bottom:25px;}
 .bottom_horizontal_form p.form_title:before {display:none;}
@@ -11458,6 +11458,35 @@ background-image: linear-gradient(to right, transparent, transparent);background
 .bottom_horizontal_form .the_form_item input[type="submit"], .bottom_horizontal_form .the_form_item [type="submit"], .bottom_horizontal_form .the_form_item_submit button {height:47px;letter-spacing:1px;background: #46A439;border-radius: 5px;font-weight: bold;font-size: 15px;text-transform: uppercase;color: #FFFFFF;}
 .bottom_horizontal_form .the_form_item input[type="submit"]:hover, .bottom_horizontal_form .the_form_item [type="submit"]:hover, .bottom_horizontal_form .the_form_item_submit button:hover {background: #369429;}
 .no_margin_bottom {margin-bottom:0 !important;}
+
+.delivery_section_mark2 {clear:both;}
+.delivery_block_mark2 {background: #F6F6F6;border-radius: 10px;margin:0 auto 30px;padding:40px 38px 13px 30px;box-sizing:border-box;}
+.delivery_section_mark2 .delivery_block_mark2 p {font-size:13px;line-height:1.4em;display:block;color:#000;}
+.delivery_section_mark2 .delivery_block_mark2 .block_title {padding:0 0 24px 0px;display:block;font-size:22px;color:#7b7b7b;line-height:1.6em;}
+.delivery_block_mark2 .block_title b {font-weight:600;color:#000;}
+.delivery_section_mark2 .delivery_block_mark2 .block_title.with_decor {padding-left:36px;background:url(../img/delivery-icon-n1.svg) no-repeat 0 4px;background-size:16px;}
+.delivery_section_mark2 .delivery_block_mark2 ul {list-style:none;left:15px;}
+.delivery_section_mark2 .delivery_block_mark2 ul li {font-size:14px;line-height:1.4em;display:block;color:#000;padding:0 0 6px 17px;background:url(../img/green-dot-ul1.svg) no-repeat 0 6px;background-size:6px;}
+.delivery_section_mark2 .delivery_block_mark2 .note {font-size:14px;font-style:italic;color:#7b7b7b;width:466px;max-width:100%;}
+.delivery_section_mark2 .delivery_block_mark2 ul + .note {padding-left:22px;}
+
+.delivery_formats {margin:0 -10px 15px -10px;display:flex;flex-flow:row wrap;justify-content:flex-start;align-items:stretch;}
+.delivery_formats .delivery_format_item {width:520px;max-width:100%;background: #FFFFFF;box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);border-radius: 10px;display:block;margin:0px 5px 10px;padding:18px 30px 0px 20px;box-sizing:border-box;position:relative;}
+.delivery_formats .delivery_format_item p {padding:0 0 20px 0;display:block;font-size:14px;color:#3a3a3a;line-height:1.4em;}
+.delivery_formats .delivery_format_item .title {font-weight: 600;font-size: 16px;line-height: 1.3em;color:#000;padding:0 0 9px 0;}
+.delivery_formats.three_in_row {margin:0 -7px 15px -7px;}
+.delivery_formats.three_in_row .delivery_format_item {width:345px;margin:0 4px 7px 3px;padding:0px 35px 0px 20px;height:76px;display:flex;flex-flow:column wrap;justify-content:center;align-items:flex-start;}
+.delivery_formats.three_in_row .title {padding:0;}
+.delivery_formats.three_in_row .title i {font-size:13px;font-style:normal;display:block;}
+
+
+
+
+
+
+
+
+
 
 
 /* * =================================================== * Back to top * =================================================== */

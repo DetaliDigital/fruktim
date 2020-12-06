@@ -53,21 +53,12 @@
                             <button class="button green_button">Бесплатно доставляем</button>
                             
                             <p>
-                                по Санкт-Петербургу и Москве <br/>
+                                по Санкт-Петербургу и Москве  
                                 оптовые заказы <b class="red">от 15 000 рублей</b>
                             </p>
                         </div>    
                    
                    </div>
-                    
-                    <div class="opto_page_introtext">
-                        <p>
-                            <p><b>Интернет-магазин "Фруктим"</b> - это надежный оптовый поставщик фруктов, овощей, орехов, сухофруктов и других натуральных продуктов. Скоропортящиеся продукты мы доставляем оптом только по Петербургу и Москве, остальной ассортимент, например, орехи и сухофрукты, мы доставляем оптом по всей России.</p>
-                            <p>Мы всегда доставляем только вкусные фрукты и овощи. Вы почувствуете разницу с продукцией из супермаркетов! Мы отбираем все товары вручную, проверяя соответствие качества высоким стандартам. Фруктим – это внимательное отношение к каждому клиенту и отличная обратная связь. Ежедневно наши курьеры доставляют еду в офисы, гостиницы, рестораны, кафе, столовые, и другие заведения хорека и общепита.</p>
-                        </p>    
-                    </div>
-                
-                
                 <div class="benefits_wrap">
                     <h2>Преимущества работы с нами:</h2>
                     
@@ -78,7 +69,7 @@
                                 
                                 <div class="text">
                                     <p>
-                                       Минимальная фасовка<br>
+                                       Минимальная фасовка 
                                        продуктов <b>от 1 кг</b> 
                                     </p>
                                 </div>
@@ -90,7 +81,7 @@
                                 
                                 <div class="text">
                                     <p>
-                                       <b>Бесплатно</b> доставляем<br> 
+                                       <b>Бесплатно</b> доставляем 
                                         по Петербургу и Москве
                                     </p>
                                 </div>
@@ -102,7 +93,7 @@
                                 
                                 <div class="text">
                                     <p>
-                                       Быстрая доставка<br> <b>от 2 часов</b> 
+                                       Быстрая доставка <b>от 2 часов</b> 
                                     </p>
                                 </div>
                             </div>
@@ -114,7 +105,7 @@
                                 
                                 <div class="text">
                                     <p>
-                                       Всегда<br> свежие продукты
+                                       Всегда свежие продукты
                                     </p>
                                 </div>
                             </div>
@@ -126,7 +117,7 @@
                                 
                                 <div class="text">
                                     <p>
-                                       <b>Низкие цены</b>  на весь<br> 
+                                       <b>Низкие цены</b>  на весь 
                                         оптовый ассортимент
                                     </p>
                                 </div>
@@ -262,36 +253,7 @@
             </div>   
                 
                 
-            <!--
-            <div class="pop_cat_block ">
-                <nav class="hidden_for_revealing fast-links-container inner_section">
-                    {'!pdoMenu' | snippet : [
-                    'tplOuter' => '@INLINE
-                    <ul>{$wrapper}</ul>
-                    '
-                    'level' => 1
-                    'where' => ['isfolder' => 1]
-                    ]}
-                    <a class="reveal_all visible_on_mobile_only" href="#"><span><b>Показать полностью</b></span></a>
-                </nav>
-            </div>
-            -->
-
-            {'!msPreWrapperCase' | snippet : [
-            'snippet' => 'pdoResources',
-            'parents' => 8,
-            'resources' => 'tv_categories_landing_combo_preset_5' | tv | fromJSON | join,
-            'tplWrapper' => 'dsmc.msProducts.wrapper.categories',
-            'wrapIfEmpty' => 0,
-            'tpl' => 'dsmc.msProducts.row.category',
-            'limit' => 12,
-            'includeTVs' => 'tv_image_section_popular_category',
-            'tvPrefix' => ''
-            'wrapperPlaceholders' => [
-            'title' => 'Популярные категории',
-            ]
-            ]}
-
+         
 
             {'!msPreWrapperCase' | snippet : [
             'parents' => 'tv_categories_landing_combo_preset_1' | tv | fromJSON | join,

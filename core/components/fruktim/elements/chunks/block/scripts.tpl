@@ -1,4 +1,3 @@
-{if $_modx->user.id > 0}
 <div class="share-button on-up">
     <a href="{'whatsapp' | option}" class="item">
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
@@ -6,8 +5,8 @@
     <a href="{'viber' | option}" class="item">
         <i class="fab fa-viber" aria-hidden="true"></i>
     </a>
-    <a onclick="jivo_api.open();" class="item">
-        <span class="icon-jivo"><span class="path1"></span><span class="path2"></span></span>
+    <a href="{'telegram' | option}" class="item">
+        <i class="fab fa-telegram-plane"></i>
     </a>
     <div class="item open_share">
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
@@ -33,7 +32,6 @@
     </svg>
 
     <!-- back-to-top -->
-{/if}
 
 {$_modx->regClientScript("assets/templ/js/ms2.js")}
 {if 'id' | resource != 584 ?}

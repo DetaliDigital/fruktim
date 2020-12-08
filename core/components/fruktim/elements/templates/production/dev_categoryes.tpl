@@ -38,50 +38,66 @@
                 </div>
             </div>
             
-              
+            {if ('tv_section_description_image' | tv) && ('tv_section_description_intro' | tv) }
             <div class="inner_section no_margin_bottom clearfix">
-            
+
             <div class="opto_page_description">
-                    
+
+                        {if 'tv_section_description_image' | tv}
                         <div class="img">
-                            <img src="assets/templ/img/opto-pic1.png" alt="">
-                        </div>    
-                   
-                    
-                   
+                            <img src="{'tv_section_description_image' | tv}" alt="">
+                        </div>
+                        {/if}
+
                         <div class="text">
-                            <button class="button green_button">Бесплатно доставляем</button>
-                            
+                            <button class="button green_button">{'tv_section_description_title' | tv}</button>
+
+                            {if 'tv_section_description_intro' | tv ?}
                             <p>
-                                по Санкт-Петербургу и Москве  
-                                оптовые заказы <b class="red">от 15 000 рублей</b>
+                                {'tv_section_description_intro' | tv}
                             </p>
+                            {/if}
                         </div>    
                    
                    </div>
+                {/if}
+
+                {'infoBlock' | snippet : [
+                'id' => 3
+                ]}
+
+                {*
                 <div class="benefits_wrap">
                     <h2>Преимущества работы с нами:</h2>
                     
                     <div class="benefits_block">
                          
                             <div class="benefits_item">
-                                <div class="icon icon1"></div>
+                                <div class="icon icon1">
+                                    <svg class="svg-icon svg-icon-md">
+                                          <use xlink:href="#icon-benefit1"></use>
+                                    </svg>
+                                </div>
                                 
                                 <div class="text">
                                     <p>
-                                       Минимальная фасовка 
-                                       продуктов <b>от 1 кг</b> 
+                                       Минимальная фасовка
+                                       продуктов 1 кг 
                                     </p>
                                 </div>
                             </div>
                         
                         
                             <div class="benefits_item">
-                                <div class="icon icon2"></div>
+                                <div class="icon icon2">
+                                    <svg class="svg-icon svg-icon-md">
+                                          <use xlink:href="#icon-benefit2"></use>
+                                    </svg>
+                                </div>
                                 
                                 <div class="text">
                                     <p>
-                                       <b>Бесплатно</b> доставляем 
+                                       Бесплатно доставим курьером 
                                         по Петербургу и Москве
                                     </p>
                                 </div>
@@ -89,11 +105,15 @@
                         
                          
                             <div class="benefits_item">
-                                <div class="icon icon3"></div>
+                                <div class="icon icon3">
+                                    <svg class="svg-icon svg-icon-md">
+                                          <use xlink:href="#icon-benefit3"></use>
+                                    </svg>
+                                </div>
                                 
                                 <div class="text">
                                     <p>
-                                       Быстрая доставка <b>от 2 часов</b> 
+                                       Быстрая доставка от 2 часов
                                     </p>
                                 </div>
                             </div>
@@ -101,7 +121,11 @@
                         
                          
                             <div class="benefits_item">
-                                <div class="icon icon4"></div>
+                                <div class="icon icon4">
+                                    <svg class="svg-icon svg-icon-md">
+                                          <use xlink:href="#icon-benefit4"></use>
+                                    </svg>
+                                </div>
                                 
                                 <div class="text">
                                     <p>
@@ -113,11 +137,15 @@
                         
                         
                             <div class="benefits_item">
-                                <div class="icon icon5"></div>
+                                <div class="icon icon5">
+                                    <svg class="svg-icon svg-icon-md">
+                                          <use xlink:href="#icon-benefit5"></use>
+                                    </svg>
+                                </div>
                                 
                                 <div class="text">
                                     <p>
-                                       <b>Низкие цены</b>  на весь 
+                                       Низкий уровень цен на весь 
                                         оптовый ассортимент
                                     </p>
                                 </div>
@@ -126,134 +154,99 @@
                         
                        
                             <div class="benefits_item">
-                                <div class="icon icon6"></div>
+                                <div class="icon icon6">
+                                    <svg class="svg-icon svg-icon-md">
+                                          <use xlink:href="#icon-benefit6"></use>
+                                    </svg>
+                                </div>
                                 
                                 <div class="text">
                                     <p>
-                                      <b>Индивидуальные условия</b> 
-                                        постоянным клиентам
+                                      Индивидуальные условия 
+                                        для постоянных клиентов
                                     </p>
                                 </div>
                             </div>
                         
                     </div><!--/advantages_block-->
+                    *}
                     
                     <div class="text_benefits">
                          
-                            <div class="text_benefits_item">
-                                <p>
-                                   <span class="red">Мы знаем</span>
-                                    что в вопросе поставок продуктов, решающими и самыми ценными являются три фактора: качество, цены и скорость поставки. 
-                                </p>
-                            </div>
-                       
-                        
-                        
-                            <div class="text_benefits_item">
-                                <p>
-                                   <span class="red">Всегда следим </span>
-                                   чтобы качество продукции и скорость доставки всегда оставались на высоком уровне, а цены на низком. 
-                                </p>
-                            </div>
-                     
-                        
-                       
-                            <div class="text_benefits_item">
-                                <p>
-                                   <span class="red">Придерживаемся </span>
-                                    правила, что фрукты и овощи должны быть свежими, спелыми и обладать яркими вкусовыми качествами. 
-                                </p>
-                            </div>
+                            {'!infoBlock' | snippet : [
+                            'id' => 4
+                            ]}
                        
                     </div><!--/text_benefits-->
-                    
+
+                    {'!infoBlock' | snippet : [
+                    'id' => 2
+                    ]}
+                    {*
                     <div class="opto_page_contacts">
                         <div class="opto_page_contacts_item">
-                            <p class="title"><span class="red">Заказать</span> фрукты и овощи оптом 
+                            <p class="title"><span class="red">Заказать</span> фрукты и овощи оптом
                             можно удобным способом:</p>
                         </div>
-                        
+
                         <div class="opto_page_contacts_item opto_page_contacts_item_social">
-                            <a href="#" target="_blank"><img src="assets/templ/img/opto-s1.svg" alt=""></a>
-                            <a href="#" target="_blank"><img src="assets/templ/img/opto-s2.svg" alt=""></a>
-                            <a href="#" target="_blank"><img src="assets/templ/img/opto-s3.svg" alt=""></a>
-                            <a href="#" target="_blank"><img src="assets/templ/img/opto-s4.svg" alt=""></a>
-                            <a href="#" target="_blank"><img src="assets/templ/img/opto-s5.svg" alt=""></a>
-                            <a href="#" target="_blank"><img src="assets/templ/img/opto-s6.svg" alt=""></a>
-                            <a href="#" target="_blank"><img src="assets/templ/img/opto-s7.svg" alt=""></a>
+                            <a href="#" target="_blank">
+                                <svg class="svg-icon svg-icon-md">
+                                      <use xlink:href="#icon-social1"></use>
+                                </svg>
+                            </a>
+                            <a href="#" target="_blank">
+                                <svg class="svg-icon svg-icon-md">
+                                      <use xlink:href="#icon-social2"></use>
+                                </svg>
+                            </a>
+                            <a href="#" target="_blank">
+                                <svg class="svg-icon svg-icon-md">
+                                      <use xlink:href="#icon-social3"></use>
+                                </svg>
+                            </a>
+                            <a href="#" target="_blank">
+                                <svg class="svg-icon svg-icon-md">
+                                      <use xlink:href="#icon-social4"></use>
+                                </svg>
+                            </a>
+                            <a href="#" target="_blank">
+                                <svg class="svg-icon svg-icon-md">
+                                      <use xlink:href="#icon-social5"></use>
+                                </svg>
+                            </a>
+                            <a href="#" target="_blank">
+                                <svg class="svg-icon svg-icon-md">
+                                      <use xlink:href="#icon-social6"></use>
+                                </svg>
+                            </a>
+                            <a href="#" target="_blank">
+                                <svg class="svg-icon svg-icon-md">
+                                      <use xlink:href="#icon-social7"></use>
+                                </svg>
+                            </a>
                         </div>
                         <!--
                         <div class="opto_page_contacts_item">
                             <button class="cart_icon_button">Оформить на сайте</button>
                         </div>
-                        
+
                         <div class="opto_page_contacts_item">
                            <p class="mail_icon_p">Прислать заказ в удобном формате <br/>
                             нам на почту: <a href="mailto:info@fruktim.ru">info@fruktim.ru</a></p>
                         </div>
                         -->
                     </div>
-                        
-                </div>
-                
-                <div class="bottom_horizontal_form_wrap">
-                    <div class="the_form one_click_form_block bottom_horizontal_form">
 
-                        <form method="post" class="mvtForm2" id="bottom_horizontal_form">
-                <input type="hidden" name="form" value="bottom_horizontal_form">
-                <input type="hidden" name="bottom_horizontal_form_resource" value="">
-                <input type="hidden" name="token" value="">
-                <input type="hidden" name="bottom_horizontal_form_product" id="mvtForms2ProductId" value="">
-                <input type="hidden" name="bottom_horizontal_form_product_count" id="mvtForms2ProductCount" value="1">
-                <input type="hidden" name="bottom_horizontal_form_product_options" id="mvtForms2ProductOptions" value="">
-            
-                <p class="form_title">
-                    
-                    <span><b>Остались вопросы?</b> мы перезвоним</span>
-                </p>
-                
-                <div class="the_form_fields_wrap">
-                    <div class="the_form_item_wrap">
-                        <div class="the_form_item the_form_item_half">
-                            <input type="text" name="bottom_horizontal_form_name" placeholder="Ваше имя">
-                        </div>
-                    
-                        <div class="the_form_item the_form_item_half">
-                            <input type="text" name="bottom_horizontal_form_phone" class="dsmc_input_phone" placeholder="Телефона">
-                        </div>
-                    </div>
-               
-                    <div class="the_form_item the_form_item_textarea">
-                        <textarea name="bottom_horizontal_form_question" placeholder="Задайте вопрос который вас интересует"></textarea>
-                    </div>
-               
-                
-                    <div class="the_form_item the_form_item_submit">
-                        <button id="bottom_horizontal_form_submit" class="mvtForms2boc" type="button">Отправить</button>
-                    </div>
-                    
-                    <div class="the_form_item the_form_item_accept">
-                        <input type="checkbox" name="oneclick_accept" checked="checked" id="oneclick_accept" style="display:none;">
-                
-                        <label class="checkbox1_label" for="oneclick_accept">
-                            <svg width="18px" height="18px" viewBox="0 0 18 18">
-                                <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
-                                <polyline points="1 9 7 14 15 4"></polyline>
-                            </svg>
-                            <span>Я согласен с <a href="policy/" rel="nofollow">правилами</a> политики конфиденциальности</span>
-                        </label>
-                    </div>
                 </div>
-               
-            </form>       
+                *}
+
+
+                {'!mvtForms2' | snippet : [
+                'form' => 'questions'
+                ]}
+            
             </div>
-                </div>
-                
-            
-            </div>   
-                
-                
-         
 
             {'!msPreWrapperCase' | snippet : [
             'parents' => 'tv_categories_landing_combo_preset_1' | tv | fromJSON | join,

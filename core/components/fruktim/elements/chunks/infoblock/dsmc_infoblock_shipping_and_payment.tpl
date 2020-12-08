@@ -1,9 +1,8 @@
-{foreach $positions as $position}
-    {$position.title}
+    {$title}
     <div class="wr-info-block">
         <div class="container p-0 info-block-container">
             <div class="row">
-                {foreach $position.items as $item}
+                {foreach $items as $item}
                     <div class="col-12 col-md-6 info-block">
                         <div class="info-title">
                             {$item.name}
@@ -19,4 +18,3 @@
             </div>
         </div>
     </div>
-{/foreach}

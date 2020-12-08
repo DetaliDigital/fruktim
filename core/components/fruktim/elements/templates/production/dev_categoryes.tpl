@@ -14,8 +14,8 @@
             <div class="inner_section">
                 {'pdoCrumbs' | snippet : [
                 'tplWrapper' => '@INLINE
-                <ul class="breadcrumbs">{$output}</ul>
-                '
+                <ul class="breadcrumbs">{$output}</ul>',
+                'showHome' => 1
                 ]}
             </div>
         </div>

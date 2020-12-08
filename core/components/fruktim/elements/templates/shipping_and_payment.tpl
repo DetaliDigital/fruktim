@@ -13,7 +13,9 @@
         <div class="breadcrumbs_block">
             <div class="inner_section">
                 {'pdoCrumbs' | snippet : [
-                'tplWrapper' => '@INLINE <ul class="breadcrumbs">{$output}</ul>'
+                'tplWrapper' => '@INLINE
+                <ul class="breadcrumbs">{$output}</ul>',
+                'showHome' => 1
                 ]}
             </div>
         </div>
@@ -33,6 +35,6 @@
     {include 'footer'}
 
 </div>
-{include 'sctipts'}
+{include 'scripts'}
 </body>
 </html>

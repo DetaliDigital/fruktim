@@ -5,11 +5,13 @@
 
     <div class="opto_page_contacts_item opto_page_contacts_item_social">
 {foreach $items as $item}
-        <a href="{$item.intro}" target="_blank">
+        {if $item.description ?}
+        <a href="{$item.description}" target="_blank">
             <svg class="svg-icon svg-icon-md">
                 <use xlink:href="#{$item.icon}"></use>
             </svg>
         </a>
+        {/if}
 {/foreach}
     </div>
 </div>

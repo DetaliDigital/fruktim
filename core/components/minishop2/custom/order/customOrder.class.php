@@ -1,12 +1,13 @@
 <?php
 
-class customOrderInterface extends msOrderHandler
-{
-    /**
-     * @param array $data
-     *
-     * @return array|string
-     */
+/**
+ * @param array $data
+ *
+ * @return array|string
+ */
+
+class customOrderInterface extends msOrderHandler {
+
     public function submit($data = array())
     {
         $response = $this->ms2->invokeEvent('msOnSubmitOrder', array(
@@ -121,9 +122,14 @@ class customOrderInterface extends msOrderHandler
             $response = $this->ms2->changeOrderStatus($order->get('id'), 1);
             if ($response !== true) {
                 return $this->error($response, array('msorder' => $order->get('id')));
-            } /** @var msPayment $payment */
-            elseif ($payment = $this->modx->getObject('msPayment',
-                array('id' => $order->get('payment'), 'active' => 1))
+            }
+
+            // Reload order object after changes in changeOrderStatus method
+            $order = $this->modx->getObject('msOrder', array('id' => $order->get('id')));
+
+            /** @var msPayment $payment */
+            if ($payment = $this->modx->getObject('msPayment',
+                array('id' => $order->get('payment'), 'active' => 1) && $order->get('class') != '')
             ) {
                 $response = $payment->send($order);
                 if ($this->config['json_response']) {
@@ -148,13 +154,22 @@ class customOrderInterface extends msOrderHandler
             } else {
                 if ($this->ms2->config['json_response']) {
                     $success_page = $this->modx->getOption('ms2_order_success_page');
-                    if (is_numeric($success_page)) {
-                        if ($this->modx->getCount('modResource', array('id' => $success_page, 'published' => true, 'deleted' => false))) {
+                    if(is_numeric($success_page)) {
+                        if ($this->modx->getCount('modResource', array('id'=>$success_page,'published' => true,'deleted' => false))) {
                             $url = $this->modx->context->makeUrl($success_page);
-                            return $this->success('', array('redirect' => $url . '?msorder=' . $order->get('id')));
+                            return $this->success('', array('redirect' => $url.'?msorder='.$order->get('id')));
                         }
                     }
                     return $this->success('', array('msorder' => $order->get('id')));
+                } else {
+                    $this->modx->sendRedirect(
+                        $this->modx->context->makeUrl(
+                            $this->modx->resource->id,
+                            array('msorder' => $response['data']['msorder'])
+                        )
+                    );
+
+                    return $this->success();
                 }
             }
         }

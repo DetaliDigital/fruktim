@@ -596,8 +596,19 @@ class mvtForms2 {
         switch ($this->form['type']) {
             
             case 2:
-                
-                $order_data['num'] = $this->getOrderNum($this->modx->getOption('mvtforms2_product_page_number_prefix').$this->miniShop2->order->getNum());
+
+                $c = $this->modx->newQuery('msOrder');
+                $c->select('id');
+                $c->sortby('id', 'DESC');
+                $c->limit(1);
+                if ($c->prepare() && $c->stmt->execute()) {
+                    $id_num = $c->stmt->fetchColumn();
+                }
+
+                $cur = strftime('%y%m');
+                $count = intval($id_num) + 1;
+
+                $order_data['num'] = sprintf('%s%05d', $cur, $count);
                 
                 foreach ($products['products'] as $item){
                     $order_data['weight'] += $item['weight'];
@@ -627,8 +638,19 @@ class mvtForms2 {
             break;
             
             case 3:
+
+                $c = $this->modx->newQuery('msOrder');
+                $c->select('id');
+                $c->sortby('id', 'DESC');
+                $c->limit(1);
+                if ($c->prepare() && $c->stmt->execute()) {
+                    $id_num = $c->stmt->fetchColumn();
+                }
+
+                $cur = strftime('%y%m');
+                $count = intval($id_num) + 1;
                 
-                $order_data['num'] = $this->getOrderNum($this->modx->getOption('mvtforms2_cart_number_prefix').$this->miniShop2->order->getNum());
+                $order_data['num'] = sprintf('%s%05d', $cur, $count);
                 
                 $cart_status = $this->miniShop2->cart->status();
                 $order_data['weight'] = $cart_status['total_weight'];

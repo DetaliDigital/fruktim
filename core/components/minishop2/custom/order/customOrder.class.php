@@ -8,6 +8,31 @@
 
 class customOrderInterface extends msOrderHandler {
 
+    /**
+     * Return current number of order
+     *
+     * @return string
+     */
+
+    public function getNum()
+    {
+        $format = htmlspecialchars($this->modx->getOption('ms2_order_format_num', null, '%y%m'));
+
+        $cur = $format ? strftime($format) : date('ym');
+
+        $c = $this->modx->newQuery('msOrder');
+        $c->select('id');
+        $c->sortby('id', 'DESC');
+        $c->limit(1);
+        if ($c->prepare() && $c->stmt->execute()) {
+            $id = $c->stmt->fetchColumn();
+        }
+
+        $count = intval($id) + 1;
+
+        return sprintf('%s%05d', $cur, $count);
+    }
+
     public function submit($data = array())
     {
         $response = $this->ms2->invokeEvent('msOnSubmitOrder', array(

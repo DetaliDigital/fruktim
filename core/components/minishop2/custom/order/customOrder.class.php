@@ -1,5 +1,7 @@
 <?php
-class customOrderInterface extends msOrderHandler {
+
+class customOrderInterface extends msOrderHandler
+{
     /**
      * @param array $data
      *
@@ -146,14 +148,14 @@ class customOrderInterface extends msOrderHandler {
             } else {
                 if ($this->ms2->config['json_response']) {
                     $success_page = $this->modx->getOption('ms2_order_success_page');
-                    if(is_numeric($success_page)) {
-                        if ($this->modx->getCount('modResource', array('id'=>$success_page,'published' => true,'deleted' => false))) {
+                    if (is_numeric($success_page)) {
+                        if ($this->modx->getCount('modResource', array('id' => $success_page, 'published' => true, 'deleted' => false))) {
                             $url = $this->modx->context->makeUrl($success_page);
-                            return $this->success('', array('redirect' => $url.'?msorder='.$order->get('id')));
-            	    }
+                            return $this->success('', array('redirect' => $url . '?msorder=' . $order->get('id')));
+                        }
                     }
                     return $this->success('', array('msorder' => $order->get('id')));
-                  }
+                }
             }
         }
 

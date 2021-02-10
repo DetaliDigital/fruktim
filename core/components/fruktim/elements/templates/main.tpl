@@ -60,6 +60,26 @@
             </div>
         </section>
 
+        {'!msPreWrapperCase' | snippet : [
+        'parents' => 'tv_categories_main_combo_preset_1' | tv | fromJSON | join,
+        'tplWrapper' => 'dsmc.wrapper.product',
+        'wrapIfEmpty' => 0,
+        'tpl' => 'dsmc.tpl.row.product',
+        'limit' => 10,
+        'wrapperPlaceholders' => [
+        'title' => 'tv_categories_main_combo_preset_1' | tv_superselect_get : 'pagetitle',
+        'number_title' => 3,
+        'parent_link' => 'tv_categories_main_combo_preset_1' | tv_superselect_get : 'uri',
+        'carusel' => 0
+        ],
+        'optionFilters' => [
+        'taxonomy_product' => 'main',
+        ] | json_encode,
+        'sortby' => [
+        'menuindex' => 'ASC'
+        ]]
+        }
+
 
         <section class="catalog_section main_actions_catalog_section">
             <div class="inner_section">
@@ -90,7 +110,6 @@
                 </div>
             </div>
         </section>
-
 
         <section class="catalog_section main_catalog_section grey_bg">
             <div class="inner_section">

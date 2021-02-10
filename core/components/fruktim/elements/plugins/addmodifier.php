@@ -15,8 +15,10 @@ switch ($modx->event->name) {
             if ($input) {
                 $value = explode(',' , $modx->resource->getTVValue($input));
                 $value = (preg_replace("/[^,.0-9]/", '', $value[0]));
-                $row = resource($value)->get($option);
-                return $row;
+                if (!empty($value)) {
+                    $row = resource($value)->get($option);
+                    return $row;
+                }
             }
         });
 

@@ -121,11 +121,11 @@
                 <div class="section_title_wrap">
                     {if 'title4' | tv ?}
                     <p class="section_title">
-                        <span></span>{'title4' | tv}
+                        <span></span><h1>{'title4' | tv}</h1>
                     </p>
                     {/if}
                 </div>
-
+                <p>&nbsp;</p>
                 <div class="main_about_article">
                     {'text2' | tv}
                 </div>

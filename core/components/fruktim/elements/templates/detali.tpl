@@ -156,7 +156,7 @@
               </div>
               <div class="the_form the_form_thanks">
                 <div class="the_form_thanks_content">
-                  <img src="assets/templ/img/thanks_icon1.png" alt=""/>
+                  <img src="assets/templ/img/thanks_icon1.png" alt="Спасибо!"/>
                   <p class="thanks_title"><b>Спасибо</b>
                     <br/> за ваш заказ!</p>
                   <p>С вами в течении 30 минут свяжется наш менеджер</p>
@@ -191,7 +191,7 @@
               <div class="the_tabs_item active clearfix" itemprop="description">
                 <article>
                   {if $_modx->resource.content != ''}
-                      <h5 class="mb-3">Описание</h5>
+                      <h2 class="mb-3">Описание</h2>
                       {$_modx->resource.content}
                   {/if}
 

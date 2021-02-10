@@ -86,7 +86,7 @@
                             {'!getCache' | snippet : [
                             'element' => 'pdoMenu'
                             'cacheKey' => 'getMenu'
-                            'parents' => '588',
+                            'parents' => '1413',
                             'level' => 1,
                             'cache' => 1,
                             'outerClass' => 'nav_footer',
@@ -94,7 +94,7 @@
                             'levelClass' => 'level',
                             'firstClass' => '',
                             'lastClass' => '',
-                            'limit' => '6',
+                            'limit' => '5',
                             'parentClass' => 'column'
                             ]}
                         </li>
@@ -250,7 +250,7 @@
 
         <div class="footer_column footer_column_contacts clearfix">
             <div class="footer_logo">
-                <a href="/" rel="nofollow"><img src="assets/templ/img/logo.png" alt="" /></a>
+                <a href="/" rel="nofollow"><img src="assets/templ/img/logo.png" alt="Магазин Фруктим" /></a>
             </div>
             [[pdoField?&id=`7`&field=`footer`]]
         </div>

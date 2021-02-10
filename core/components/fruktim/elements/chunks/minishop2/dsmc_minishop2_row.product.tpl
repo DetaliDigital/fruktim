@@ -2,7 +2,7 @@
     <div class="catalog_block_item catalog_block_item_mark2 shk-item">
         <div class="img">
             <a href="{$id | url}">
-                <img src="{$image | phpthumbon : 'w=300&h=300&bg=fff&fltr=wmi|/assets/templ/img/water-fruktim-300.png'}" alt=""/>
+                <img src="{$image | phpthumbon : 'w=300&h=300&bg=fff&fltr=wmi|/assets/templ/img/water-fruktim-300.png'}" alt="{$pagetitle}"/>
             </a>
         </div>
         <form method="post" class="ms2_form">

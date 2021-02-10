@@ -29,7 +29,7 @@
         <div class="inner_header_content clearfix">
             <div class="logo">
                 <a href="/">
-                    <img src="assets/templ/img/logo-ver3.svg" alt="" />
+                    <img src="assets/templ/img/logo-ver3.svg" alt="Фруктим" />
 
                 </a>
             </div>

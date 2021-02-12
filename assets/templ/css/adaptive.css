@@ -1255,12 +1255,14 @@ background: url(../img/dropdown-head-line.png) no-repeat 0 bottom;}
     
     .opto_page_contacts_item_social a {width:26px;margin-left:2px;margin-right:2px;}
     .opto_page_contacts_item_social {margin:0 auto;}
+    .opto_page_contacts_item_social a svg {width:26px;height:26px;}
     .bottom_horizontal_form .the_form_item textarea {padding-top:5px;}
     
     .delivery_block_mark2 {padding:25px 19px 10px 19px;}
     .delivery_block_mark2 p {box-sizing:border-box;}
     .delivery_section_mark2 .delivery_block_mark2 .block_title {text-align:center;font-size:18px;padding:0 0 18px 0;line-height: 1.35em;}
     .delivery_section_mark2 .delivery_block_mark2 .block_title.with_decor {padding:40px 0 28px 0;background-position:center 0;}
+    .delivery_section_mark2 .delivery_block_mark2 .block_title.with_decor svg {top:0;left:50%;margin-left:-6px;}
     .delivery_block_mark2 .block_title b {display:block;}
     .delivery_section_mark2 .delivery_block_mark2 .note {padding-right:25px;line-height: 1.35em;}
     .delivery_section_mark2 .delivery_block_mark2 ul li {padding-right:15px;line-height: 1.4em;}

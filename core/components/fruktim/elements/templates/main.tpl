@@ -70,7 +70,8 @@
         'title' => 'tv_categories_main_combo_preset_1' | tv_superselect_get : 'pagetitle',
         'number_title' => 3,
         'parent_link' => 'tv_categories_main_combo_preset_1' | tv_superselect_get : 'uri',
-        'carusel' => 0
+        'carusel' => 0,
+        'style' => 'padding-top:50px;'
         ],
         'optionFilters' => [
         'taxonomy_product' => 'main',

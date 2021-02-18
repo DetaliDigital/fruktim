@@ -210,11 +210,7 @@
     </defs>
 </symbol>
 
-
-
-
-    
-
-
-
+<symbol id="icon-arrow-left" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6.5 2L2.91421 5.58579C2.13316 6.36684 2.13317 7.63317 2.91421 8.41421L6.5 12" stroke="white" stroke-width="3"/>
+</symbol>
 </svg>

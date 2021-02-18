@@ -43,5 +43,20 @@ switch ($modx->event->name) {
             return $input . ',' . $output;
 
         });
+
+        $fenom->addModifier('dsmc_resource_menu_id', function ($input) use ($modx) {
+            if ($input) {
+                $count = $modx->getCount('modResource', ['parent' => $input, 'class_key:!=' => 'msProduct']);
+                if ($count > 0) {
+                    $output = $modx->resource->id;
+                }
+                else {
+                    $output = $modx->resource->parent;
+                }
+            }
+
+            return $output;
+        });
+
         break;
 }

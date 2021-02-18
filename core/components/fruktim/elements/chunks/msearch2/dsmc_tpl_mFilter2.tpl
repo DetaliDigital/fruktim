@@ -64,6 +64,33 @@
 
     </div>
 
+        {if $_modx->user.id > 0}
+        {'!pdoMenu' | snippet : [
+        'parents' => ('id' | resource) | dsmc_resource_menu_id ,
+        'level' => 3,
+        'tplOuter' => 'dsmc.pdoMenu.navbar.catalog.outer',
+        'tplInner' => '@INLINE <ul {$classes}">{$wrapper}</ul>',
+        'outerClass' => 'nav_left_bar',
+        'innerClass' => 'inner',
+        'levelClass' => 'level',
+        'firstClass' => '',
+        'lastClass' => '',
+        'parentClass' => 'submenu',
+        'where' => ['isfolder' => 1]
+        ]}
+    <div class="content_right_column content_filters to_left">
+        <div class="filter_block">
+            <div class="filter_block_inner">
+                <a href="#" class="filter_close_toggler">Закрыть</a>
+                <div class="filter_item">
+                    <form action="" method="post" id="mse2_filters">
+                        {$filters}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {else}
     <div class="content_right_column to_left">
         <div class="filter_block">
             <div class="filter_block_inner">
@@ -88,4 +115,5 @@
             </div>
         </div>
     </div>
+    {/if}
 </div>

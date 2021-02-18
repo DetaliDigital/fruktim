@@ -11631,3 +11631,103 @@ body .__jivoMobileButton {
   bottom: 0;
   z-index: -1;
 }
+
+/* ---------
+  Новая версия навигационного бара
+ */
+
+.content_right_column.content_navbar .filter_block_inner {
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.content_navbar .filter_block p.filter_head {
+  line-height: 23px;
+  font-size: 20px;
+}
+
+.content_navbar .filter_block p.filter_head::before {
+  background: none;
+}
+
+.content_navbar .nav_left_bar {
+  margin: 0;
+}
+
+.content_navbar .nav_left_bar > li {
+  padding: 0;
+  margin: 0;
+}
+
+.content_navbar .nav_left_bar > li > a {
+  font-weight: normal;
+  padding: 10px 25px 10px 25px;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+}
+
+.content_navbar .nav_left_bar > li:hover > a {
+  background-color: #F4F4F4;
+  color: #828282;
+}
+
+.content_navbar .nav_left_bar > li.active > a {
+  background-color: #F4F4F4;
+  font-weight: bold;
+  color: #F7074C;
+}
+
+.content_navbar .nav_left_bar > li > ul {
+  margin: 0 0 15px 25px;
+}
+
+.content_navbar .nav_left_bar > li > ul > li > a {
+  font-weight: 400;
+}
+
+.content_navbar .nav_left_bar li .menu_toggle {
+  height: 100%;
+  width: 30px;
+}
+
+.content_navbar .nav_left_bar li .menu_toggle {
+  background-image: url("data:image/svg+xml,%3Csvg width='7' height='6' viewBox='0 0 7 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.19039 0.417428L6.3509 2.57794C6.48348 2.71052 6.48348 2.92547 6.3509 3.05805L4.19039 5.21856C4.05781 5.35114 3.84286 5.35114 3.71028 5.21856C3.5777 5.08598 3.5777 4.87102 3.71028 4.73845L5.29124 3.15748H0V2.4785H5.29124L3.71028 0.897541C3.5777 0.764961 3.5777 0.550007 3.71028 0.417428C3.84286 0.284848 4.05781 0.284848 4.19039 0.417428Z' fill='%23C2C2C2'/%3E%3C/svg%3E%0A");
+  top: unset;
+  right: 0;
+}
+
+.content_navbar .nav_left_bar li.has_ul.active .menu_toggle {
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='8' viewBox='0 0 6 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.62573 4.78322L3.46522 6.94373C3.33264 7.0763 3.11769 7.0763 2.98511 6.94373L0.824601 4.78322C0.692022 4.65064 0.692022 4.43568 0.824601 4.3031C0.957181 4.17052 1.17214 4.17052 1.30471 4.3031L2.88568 5.88406V0.592827H3.56466V5.88406L5.14562 4.3031C5.2782 4.17052 5.49315 4.17052 5.62573 4.3031C5.75831 4.43568 5.75831 4.65064 5.62573 4.78322Z' fill='%23C2C2C2'/%3E%3C/svg%3E");
+}
+
+.content_navbar .toggler {
+  width: 28px;
+  height: 28px;
+  background: #ed0648;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 10;
+  top: 25px;
+  left: -15px;
+}
+
+.content_navbar .toggler .svg-icon {
+  width: 10px;
+  height: 20px;
+}
+
+.content_right_column.content_filters .filter_block_inner {
+  border-radius: 15px;
+}
+
+.content_filters .filter_range_wrap {
+  padding-right: 20px;
+}
+
+.content_filters .filter_item {
+  padding-top: 0;
+}

@@ -64,7 +64,6 @@
 
     </div>
 
-        {if $_modx->user.id > 0}
         {'!pdoMenu' | snippet : [
         'parents' => ('id' | resource) | dsmc_resource_menu_id ,
         'level' => 3,
@@ -90,30 +89,4 @@
             </div>
         </div>
     </div>
-    {else}
-    <div class="content_right_column to_left">
-        <div class="filter_block">
-            <div class="filter_block_inner">
-                <p class="filter_head"><span>Категории</span></p>
-                <a href="#" class="filter_close_toggler">Закрыть</a>
-                <div class="filter_item">
-                    {'!pdoMenu' | snippet : [
-                    'parents' => 8,
-                    'level' => 3,
-                    'outerClass' => 'nav_left_bar',
-                    'innerClass' => 'inner',
-                    'levelClass' => 'level',
-                    'firstClass' => '',
-                    'lastClass' => '',
-                    'parentClass' => 'submenu'
-                    'where' => ['isfolder' => 1]
-                    ]}
-                    <form action="" method="post" id="mse2_filters">
-                        {$filters}
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    {/if}
 </div>

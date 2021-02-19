@@ -2,14 +2,16 @@
     <div class="filter_block">
         <div class="filter_block_inner">
             {if 'parent' | resource != 8}
-            <a href="{'parent' | resource | url}" class="toggler">
+                <a href="{'parent' | resource | url}" class="navbar-title">
+                <span class="toggler">
                 <svg class="svg-icon">
                     <use xlink:href="#icon-arrow-left"></use>
                 </svg>
-            </a>
-            <p class="filter_head">
-                <span>{('parent' | resource) | resource : 'pagetitle'}</span>
-            </p>
+                    </span>
+                    <p class="filter_head">
+                        <span>{('parent' | resource) | resource : 'pagetitle'}</span>
+                    </p>
+                </a>
             {/if}
             <div class="filter_item">
                 <ul {$classes}>{$wrapper}</ul>

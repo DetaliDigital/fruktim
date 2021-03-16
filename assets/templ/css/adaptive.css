@@ -1268,6 +1268,8 @@ background: url(../img/dropdown-head-line.png) no-repeat 0 bottom;}
     .delivery_section_mark2 .delivery_block_mark2 ul li {padding-right:15px;line-height: 1.4em;}
     .delivery_formats .delivery_format_item, .delivery_formats.three_in_row .delivery_format_item, .delivery_formats.three_in_row .delivery_format_item:nth-child(3n+3) {width:100%;margin:0 auto 7px auto;}
     .delivery_formats .delivery_format_item:nth-child(even) {margin-right:auto;}
+    
+    .catalog_block {display:block;}
    
     
 }

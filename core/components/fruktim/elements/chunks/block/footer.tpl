@@ -250,7 +250,7 @@
 
         <div class="footer_column footer_column_contacts clearfix">
             <div class="footer_logo">
-                <a href="/" rel="nofollow"><img src="assets/templ/img/logo.png" alt="Магазин Фруктим" /></a>
+                <a href="/"><img src="assets/templ/img/logo.png" alt="Магазин Фруктим" /></a>
             </div>
             [[pdoField?&id=`7`&field=`footer`]]
         </div>

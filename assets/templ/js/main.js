@@ -556,7 +556,7 @@ $(document).on('change', '#mse2_sort', function() {
     }
 
 
-     //if ($(window).width() > 768) {
+     if ($(window).width() >= 768) {
      setTimeout(function() {
 		$('.catalog_page_cat_block .catalog_block_slider_item').matchHeight({
             byRow: true,
@@ -566,7 +566,7 @@ $(document).on('change', '#mse2_sort', function() {
     	});
      },1500);
     	
-    //}
+    }
 	//--
 
 	// content_right_column a.close_ref

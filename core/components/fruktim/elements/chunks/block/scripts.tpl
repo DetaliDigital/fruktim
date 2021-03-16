@@ -1,17 +1,17 @@
-<div class="share-button on-up">
-    <a href="{'whatsapp' | option}" class="item">
+<!--noindex--><div class="share-button on-up">
+    <a href="{'whatsapp' | option}" class="item" title="Фруктим в Вотсап" rel="nofollow">
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
-    <a href="{'viber' | option}" class="item">
+    <a href="{'viber' | option}" class="item" title="Фруктим в Вайбере" rel="nofollow">
         <i class="fab fa-viber" aria-hidden="true"></i>
     </a>
-    <a href="{'telegram' | option}" class="item">
+    <a href="{'telegram' | option}" class="item" title="Фруктим в Телеграм" rel="nofollow">
         <i class="fab fa-telegram-plane"></i>
     </a>
     <div class="item open_share">
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </div>
-</div>
+</div><!--/noindex-->
 
 <div class="back-to-top on-up top d-flex">
     <i class="fas fa-angle-up"></i>

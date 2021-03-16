@@ -45,9 +45,12 @@
                     </nav>
                 </div>
 
+                {set $dsmc_parent = 'dsmc_mspcs_where' | placeholder}
+
                 {'!msPCS' | snippet : [
+                'parents' => 8
                 'mode' => 2,
-                'snippet' => 'mFilter2'
+                'snippet' => 'mFilter2',
                 'up' => 1,
                 'class' => 'msProduct',
                 'element' => 'msProducts',

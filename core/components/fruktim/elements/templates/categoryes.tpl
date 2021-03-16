@@ -23,9 +23,14 @@
         <section class="the_content_section the_card_content_section the_cat_content_section padd_bottom0 bg_fff">
             <div class="inner_section main-title clearfix no_bg">
 
-                {if 'pagetitle' ?}
+                <div class="section_title section_hero">
                 <h1>{'pagetitle' | resource}</h1>
-                {/if}
+                    {if 'tv_section_titlehero_link' | tv ?}
+                    <div class="link_block_all_see">
+                        <a class="see_all" href="{'tv_section_titlehero_link' | tv | url}">Смотреть все</a>
+                    </div>
+                    {/if}
+                </div>
 
                 <div class="hidden_for_revealing hidden_text_revealing">
 
@@ -127,7 +132,7 @@
                                 <path d="M14 243C-5.19999 272.6 0.666679 310 6.00001 325C52 412 159 353 310 366C461 379 407 238 391 217C375 196 379 164 383 146C387 128 417 29 323 45C229 61 243 14 149 2.00002C55 -9.99998 -6 57 22 125C50 193 38 206 14 243Z"
                                       fill="#FFF7E1"/>
                             </svg>
-                            <img class="image-section" src="{'tv_categories_section_textblock_image' | tv}">
+                            <img class="image-section" src="{'tv_categories_section_textblock_image' | tv}" alt="{'tv_categories_section_textblock_title' | tv}">
                             {/if}
                         </div>
                     </div>

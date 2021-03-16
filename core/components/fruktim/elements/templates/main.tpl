@@ -92,7 +92,7 @@
                             <p class="title">{'title2' | tv}</p>
                         {/if}
                         {'text' | tv}
-                        <a href="{'url' | tv}" class="button">Все акции</a>
+                        <a href="{'url' | tv}" class="button">Все скидки</a>
                     </div>
                 </div>
 

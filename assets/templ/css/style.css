@@ -1321,7 +1321,7 @@ section .section_title .see_all {
   font-size: 13px;
   line-height: 20px;
   letter-spacing: .2px;
-  color: #8C8C8C;
+  color: #ed0648;
   font-weight: normal;
   display: inline-block;
   padding: 0;
@@ -1331,7 +1331,7 @@ section .section_title .see_all {
 }
 
 section .section_title .see_all:hover {
-  background-image: linear-gradient(to right, #8C8C8C, #8C8C8C);
+  background-image: linear-gradient(to right, #ed0648, #ed0648);
   background-repeat: repeat-x;
   background-position: 0 1.3em;
   background-size: 2px 1px;
@@ -11743,4 +11743,9 @@ body .__jivoMobileButton {
 
 .content_filters .filter_item {
   padding-top: 0;
+}
+
+.section_title.section_hero .link_block_all_see {
+  margin-top: -20px;
+  margin-bottom: 20px;
 }

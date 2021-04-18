@@ -75,7 +75,7 @@
 										</div>
 
 										<div class="final_order_contacts_column">
-											<p class="title">Доставка</p>
+											<p class="title">Адрес доставки</p>
 											
 											{foreach ['index','city','fulladds'] as $field}
                                                 {if $address[$field]?}
@@ -90,7 +90,7 @@
 										</div>
 
 										<div class="final_order_contacts_column">
-											<p class="title">Адрес доставки</p>
+											<p class="title">Доставка</p>
                                                 {if $delivery.name ?}
 										    	<p>
 												<span>Способ доставки:</span>
@@ -99,7 +99,7 @@
 											    {/if}
                                                 {if $payment.name ?}
 										    	<p>
-												<span>Вариань доставки:</span>
+												<span>Способ оплаты:</span>
 												<b>{$payment.name}</b>
 											    </p>
 											    {/if}

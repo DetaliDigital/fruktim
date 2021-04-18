@@ -70,13 +70,10 @@
                                             </div>
                                         </div>
                                     </div>
-
-
-
-
                                 </div>
                             </div>
-                            <div class="the_cart_form_row">
+
+                            <div class="the_cart_form_row" id="payments">
                                 <p class="form_head"><span>Варианты оплаты</span></p>
 
                                 <div class="the_cart_form_row_content">
@@ -84,16 +81,16 @@
                                         {foreach $payments as $payment index=$index}
                                             <div class="delivery_cart_form_item">
                                                 {var $checked = !($order.payment in keys $payments) && $index == 0 || $payment.id == $order.payment}
-                                                <label><input type="radio" name="payment" id="payment_{$payment.id}" value=">{$payment.id}" {$checked ? 'checked' : ''}>
-                                                    <span><b>{$payment.name}</b>
-											     {if $payment.description?}
-                                                    <i>{$payment.description}<i>
-                                                {/if}
-											    </span>
+                                                <label>
+                                                    <input type="radio" name="payment" value="{$payment.id}" id="payment_{$payment.id}"{$checked ? 'checked' : ''}>
+                                                        <span><b>{$payment.name}</b>
+                                                            {if $payment.description?}
+                                                                <i>{$payment.description}<i>
+                                                            {/if}
+                                                        </span>
                                                 </label>
                                             </div>
                                         {/foreach}
-
                                     </div>
                                 </div>
                             </div>

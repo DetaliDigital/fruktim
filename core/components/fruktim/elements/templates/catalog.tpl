@@ -48,7 +48,7 @@
                 {set $dsmc_parent = 'dsmc_mspcs_where' | placeholder}
 
                 {'!msPCS' | snippet : [
-                'parents' => 8
+                'parents' => $dsmc_parent ?: 'id' | resource,
                 'mode' => 2,
                 'snippet' => 'mFilter2',
                 'up' => 1,

@@ -40,7 +40,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 <!--<link type="text/css" rel="stylesheet" href="assets/templ/css/style.css[[!vers]]" />-->
 <link type="text/css" rel="stylesheet" href="assets/templ/css/style.css?ver=[[!vers]]" />
-<link type="text/css" rel="stylesheet" href="assets/templ/css/adaptive.css?ver=1.01" />
+<link type="text/css" rel="stylesheet" href="assets/templ/css/adaptive.css?ver=1.03" />
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

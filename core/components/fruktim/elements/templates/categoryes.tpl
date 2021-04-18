@@ -175,9 +175,39 @@
             'sortby' => [
             'menuindex' => 'ASC'
             ]]}
+            
+            <section class="wr-opt">
+                <div class="container p-0">
+                    <div class="row justify-content-md-between align-items-md-start">
+                        <div class="col-12 col-lg-5 image-section-container">
+                            {if 'tv_categories_section_textblock_image_2' | tv ?}
+                            <svg viewBox="0 0 414 374">
+                                <path d="M14 243C-5.19999 272.6 0.666679 310 6.00001 325C52 412 159 353 310 366C461 379 407 238 391 217C375 196 379 164 383 146C387 128 417 29 323 45C229 61 243 14 149 2.00002C55 -9.99998 -6 57 22 125C50 193 38 206 14 243Z"
+                                      fill="#FFF7E1"/>
+                            </svg>
+                            <img class="image-section image-second-section" src="{'tv_categories_section_textblock_image_2' | tv}" alt="{'tv_categories_section_textblock_title_2' | tv}">
+                            {/if}
+                        </div>
+                        <div class="col-12 col-lg-6 block-section">
+                            {if 'tv_categories_section_textblock_title_2' | tv ?}
+                            <div class="card-title">
+                                <h3>{'tv_categories_section_textblock_title_2' | tv}</h3>
+                            </div>
+                            {/if}
+                            {if 'tv_categories_section_textblock_description_2' | tv ?}
+                            <div class="card-body">
+                                {'tv_categories_section_textblock_description_2' | tv}
+                            </div>
+                            {/if}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
             {'!infoBlock' | snippet : [
             'id' => 1
             ]}
+
         </section>
     </section>
 

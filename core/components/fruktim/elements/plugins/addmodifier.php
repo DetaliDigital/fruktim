@@ -58,5 +58,5 @@ switch ($modx->event->name) {
             return $output;
         });
 
-        break;
+        break; 
 }

@@ -190,6 +190,7 @@
             <!--/ content_right_column-->
         </div>
       </section>
+
       <section class="advantages_section advantages_section_mark2">
         <div class="inner_section">
           <div class="advantages_block">

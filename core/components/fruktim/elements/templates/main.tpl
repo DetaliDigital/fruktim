@@ -74,7 +74,7 @@
         'style' => 'padding-top:50px;'
         ],
         'optionFilters' => [
-        'taxonomy_product' => 'main',
+        'taxonomy_product' => 'main'
         ] | json_encode,
         'sortby' => [
         'menuindex' => 'ASC'
@@ -114,7 +114,7 @@
         'carusel' => 0,
         ],
         'optionFilters' => [
-        'taxonomy_product' => 'main',
+        'taxonomy_product' => 'main'
         ] | json_encode,
         'sortby' => [
         'menuindex' => 'ASC'

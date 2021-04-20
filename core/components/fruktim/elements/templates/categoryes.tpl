@@ -47,9 +47,8 @@
                 <nav class="hidden_for_revealing fast-links-container inner_section">
                     {'!pdoMenu' | snippet : [
                     'tplOuter' => '@INLINE
-                    <ul>{$wrapper}</ul>
-                    '
-                    'level' => 1
+                    <ul>{$wrapper}</ul>',
+                    'level' => 1,
                     'where' => ['isfolder' => 1]
                     ]}
                     <a class="reveal_all visible_on_mobile_only" href="#"><span><b>Показать полностью</b></span></a>
@@ -65,7 +64,8 @@
             'tpl' => 'dsmc.msProducts.row.category',
             'limit' => 12,
             'includeTVs' => 'tv_image_section_popular_category',
-            'tvPrefix' => ''
+            'tvPrefix' => '',
+            'sortby' => 'ids',
             'wrapperPlaceholders' => [
             'title' => 'Популярные категории',
             ]

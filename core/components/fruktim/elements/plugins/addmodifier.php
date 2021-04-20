@@ -3,6 +3,7 @@
 switch ($modx->event->name) {
     case 'pdoToolsOnFenomInit':
         /** @var Fenom $fenom
+         *
         Мы получаем переменную $fenom при его первой инициализации и можем вызывать его методы.
         Модификатор получает значение ТВ по его название.
          */
@@ -56,6 +57,14 @@ switch ($modx->event->name) {
             }
 
             return $output;
+        });
+
+        $fenom->addModifier('dsmc_get_parent_id', function ($input, $options) use ($modx) {
+            if ($input) {
+                $pids = $modx->getParentIds($input, 10, array('context' => 'web'));
+                $spid = in_array($options, $pids);
+                return $spid;
+            }
         });
 
         break; 

@@ -1215,6 +1215,8 @@ background: url(../img/dropdown-head-line.png) no-repeat 0 bottom;}
     
     .filter_item_div {    max-width: 86%;}
     
+    .filter_is_open .main {z-index:600;}
+    .filter_block_inner .filter_close_toggler {text-align: left;    text-indent: 70px;}
    
     
     

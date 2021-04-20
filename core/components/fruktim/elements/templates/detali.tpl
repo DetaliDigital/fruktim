@@ -57,17 +57,39 @@
                     {'introtext' | resource}
                   </p>
 
-
                   {'!msProducts' | snippet : [
                   'parents' => 'parent' | resource,
                   'link' => 4,
-                  'sortby' => 'Data.weight'
-                    'master' => 'id' | resource,
-                    'tplWrapper' => 'dsmc.msProducts.packing.wrapper',
-                    'tpl' => 'dsmc.msProducts.packing.full',
-                    'wrapIfEmpty' => 0
-                    ]}
+                  'sortby' => 'Data.weight',
+                  'master' => 'id' | resource,
+                  'tplWrapper' => 'dsmc.msProducts.packing.wrapper',
+                  'tpl' => 'dsmc.msProducts.packing.full',
+                  'wrapIfEmpty' => 0
+                  ]}
 
+                  {if ('id' | resource | dsmc_get_parent_id : 59) == true}
+                  <div class="action-bouquet">
+                    <a href="#bouquet_popup" class="fancy" tabindex="0">
+                      <div class="btn btn-badge">
+                          <div class="btn-badge-img">
+                            <img src="{'image' | resource | phpthumbon : 'w=120&h=120&zc=1'}">
+                          </div>
+                          <div class="btn-badge-block">
+                              <div class="btn-badge-card">
+                                <div class="btn-badge-text">
+                                  Хотите изменить <br> букет
+                                </div>
+                                <div class="btn-badge-title">
+                                  <span>
+                                  Сделаем на заказ!
+                                  </span>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  {/if}
                 </div>
               </div>
             </div>

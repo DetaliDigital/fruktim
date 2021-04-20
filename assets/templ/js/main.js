@@ -660,6 +660,7 @@ $(document).on('change', '#mse2_sort', function() {
 	$('.filter_panel_toggling_button').add('.filter_close_toggler').click(function(e) {
 		e.preventDefault();
 		$('.filter_block').toggleClass('active');
+		$('body').toggleClass('filter_is_open');
 	})
 	//--
 

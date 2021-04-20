@@ -1318,11 +1318,11 @@ section p.section_title.centered {
 }
 
 section .section_title .see_all {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 20px;
   letter-spacing: .2px;
   color: #ed0648;
-  font-weight: normal;
+  font-weight: bold;
   display: inline-block;
   padding: 0;
   margin: 0;
@@ -10628,6 +10628,11 @@ header .header_menu_right .header_menu_button_wrap {float:left;position:relative
     top: 24px;
     left: 16px;
 }
+
+.image-second-section {
+    padding-bottom: 40px;
+}
+
 .image-section-container {
     position: relative;
 }
@@ -11748,4 +11753,80 @@ body .__jivoMobileButton {
 .section_title.section_hero .link_block_all_see {
   margin-top: -20px;
   margin-bottom: 20px;
+}
+
+.action-bouquet {
+  margin: 2rem 0;
+}
+
+.action-bouquet > a {
+  text-decoration: none;
+}
+
+.action-bouquet .btn-badge {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.action-bouquet .btn-badge .btn-badge-block {
+  padding: 0.5rem;
+  background: linear-gradient(90deg, #FF6B8F 0%, #FF5B5B 100%);
+  border-radius: 10px;
+  margin-left: 25px;
+  width: 100%;
+}
+
+.action-bouquet .btn-badge .btn-badge-block:after,
+.action-bouquet .btn-badge .btn-badge-block:before {
+  content: '';
+  width: 108px;
+  height: 108px;
+  display: block;
+  position: absolute;
+  z-index: 2;
+  border: 1px dashed #fff;
+  top: -15px;
+  left: 1px;
+  border-radius: 50%;
+}
+
+.action-bouquet .btn-badge .btn-badge-block:before {
+  left:8px;
+  opacity: .6;
+}
+
+.action-bouquet .btn-badge .btn-badge-img {
+  position: absolute;
+}
+.action-bouquet .btn-badge .btn-badge-img > img{
+  width: 100px;
+  height: 100px;
+  border: solid 4px #FF6884;
+  border-radius: 50%;
+  box-shadow: 0px 17px 28px 0px rgba(183, 196, 218, 0.38);
+  position: relative;
+  z-index: 3;
+}
+
+.action-bouquet .btn-badge .btn-badge-block .btn-badge-card {
+  display: flex;
+  flex-direction: column;
+  margin-left: 90px;
+}
+
+.action-bouquet .btn-badge .btn-badge-block .btn-badge-text {
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: .25rem;
+}
+.action-bouquet .btn-badge .btn-badge-block .btn-badge-title {
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: .25rem;
+}
+
+.action-bouquet .btn-badge .btn-badge-block .btn-badge-title > span {
+  border-bottom: 2px dotted #ffffff;
 }
